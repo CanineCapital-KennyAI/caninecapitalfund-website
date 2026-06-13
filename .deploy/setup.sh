@@ -15,7 +15,7 @@ fi
 git config --global --add safe.directory "$BUILD"
 
 # one-time docroot backups (www + subdomains)
-for dom in www.caninecapitalfund.com investor.caninecapitalfund.com portal.caninecapitalfund.com; do
+for dom in www.caninecapitalfund.com investor.caninecapitalfund.com portal.caninecapitalfund.com borrowers.caninecapitalfund.com; do
   DD=$(ls -d /home/*/htdocs/"$dom" 2>/dev/null) || continue
   [ -e "${DD}.predeploy-bak" ] || cp -a "$DD" "${DD}.predeploy-bak"
   echo "backup: ${DD}.predeploy-bak"
@@ -30,4 +30,4 @@ install -m 0755 "$BUILD/.deploy/cc-web-deploy.sh" /usr/local/bin/cc-web-deploy.s
 
 echo "---- CRON ----"; crontab -l | grep cc-web-deploy || true
 echo "---- LOG ----";  cat /var/log/cc-web-deploy.log 2>/dev/null || true
-echo "---- DONE: www + investor + portal now auto-deploy within ~2 min ----"
+echo "---- DONE: www + investor + portal + borrowers now auto-deploy within ~2 min ----"

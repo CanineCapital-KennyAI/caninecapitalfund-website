@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Sora:wght@400;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{width:1200px;height:630px;overflow:hidden}
+  .card{position:relative;width:1200px;height:630px;background:linear-gradient(135deg,#020C2E 0%,#041A63 58%,#0530AD 100%);
+    font-family:'Sora',sans-serif;color:#fff;padding:74px 84px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+  .glow{position:absolute;width:780px;height:780px;border-radius:50%;
+    background:radial-gradient(circle,rgba(41,151,216,.30),transparent 62%);top:-300px;right:-220px;pointer-events:none}
+  .glow2{position:absolute;width:520px;height:520px;border-radius:50%;
+    background:radial-gradient(circle,rgba(115,194,236,.13),transparent 62%);bottom:-260px;left:-180px;pointer-events:none}
+  .top{display:flex;align-items:center;gap:22px;position:relative;z-index:2}
+  .accent{width:54px;height:4px;border-radius:3px;background:linear-gradient(90deg,#2997D8,#73C2EC)}
+  .brand{font-weight:700;font-size:30px;letter-spacing:.26em;text-transform:uppercase}
+  .mid{position:relative;z-index:2}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:16px;letter-spacing:.22em;text-transform:uppercase;color:#73C2EC;margin-bottom:26px}
+  h1{font-family:'Playfair Display',serif;font-weight:400;font-size:80px;line-height:1.07;letter-spacing:-.01em}
+  h1 em{font-style:italic;color:#73C2EC}
+  .foot{display:flex;align-items:center;justify-content:space-between;position:relative;z-index:2}
+  .url{font-family:'IBM Plex Mono',monospace;font-size:22px;color:#C0D8FA;letter-spacing:.02em}
+  .tag{font-size:17px;color:#90B5F4;letter-spacing:.04em}
+  .lock{font-size:15px;color:#90B5F4;letter-spacing:.06em;display:flex;align-items:center;gap:9px}
+  .lock svg{width:16px;height:16px;stroke:#73C2EC;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="glow"></div>
+    <div class="glow2"></div>
+    <div class="top">
+      <span class="accent"></span>
+      <span class="brand">Canine&nbsp;Capital</span>
+    </div>
+    <div class="mid">
+      <div class="eyebrow">Admin Workstation &middot; The Canine Capital Bond Ledger</div>
+      <h1>Record. Service.<br><em>Reconcile.</em></h1>
+    </div>
+    <div class="foot">
+      <span class="url">admin.caninecapitalfund.com</span>
+      <span class="lock"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="16" height="9" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Authorized personnel only</span>
+    </div>
+  </div>
+</body>
+</html>
