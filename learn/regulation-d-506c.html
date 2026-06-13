@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regulation D 506(c) — The Library · Canine Capital</title>
+<meta name="description" content="How Rule 506(c) private placements work, who qualifies as an accredited investor, and how Canine Capital applies the framework to its 2026 institutional vintage.">
+<link rel="canonical" href="https://www.caninecapitalfund.com/learn/regulation-d-506c.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230530AD'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='white' text-anchor='middle' font-weight='bold'%3ECC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Sora:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--cc-blue:#0530AD;--cc-sky:#2997D8;--blue-50:#F0F6FF;--blue-100:#E0EDFD;--blue-200:#C0D8FA;--blue-300:#90B5F4;
+--blue-800:#0530AD;--blue-900:#041A63;--blue-950:#020C2E;--sky-100:#E4F5FD;--sky-300:#A0D7F4;--sky-400:#73C2EC;
+--sky-600:#2997D8;--sky-700:#1E7DB5;--sky-800:#145C87;--gray-50:#F6F7FA;--gray-100:#ECEDF4;--gray-200:#D8DAE6;
+--gray-400:#8E91A8;--gray-500:#636682;--gray-600:#474A62;--gray-700:#2E3042;--gray-900:#111218;--gray-950:#0A0B0F;
+--f-display:'Playfair Display',Georgia,serif;--f-body:'Sora',system-ui,sans-serif;--f-mono:'IBM Plex Mono',monospace;
+--r-md:8px;--r-lg:12px;--r-xl:18px;--r-pill:9999px;
+--sh-md:0 4px 16px rgba(5,48,173,.10),0 2px 6px rgba(5,48,173,.06)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--f-body);font-size:16px;line-height:1.7;color:var(--gray-600);background:#fff;-webkit-font-smoothing:antialiased}
+a{color:var(--blue-800);text-decoration:none}
+:focus-visible{outline:3px solid var(--sky-400);outline-offset:2px;border-radius:2px}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--blue-800),var(--sky-600));z-index:100}
+.nav{position:fixed;top:0;left:0;right:0;height:60px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--gray-100);z-index:90;display:flex;align-items:center}
+.nav-in{max-width:1100px;margin:0 auto;padding:0 28px;width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.nav-back{font-weight:700;letter-spacing:.06em;font-size:13px;color:var(--blue-800);text-transform:uppercase;white-space:nowrap}
+.nav-back span{color:var(--sky-600);margin-right:8px}
+.nav-tag{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;color:var(--gray-400);text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-cta{display:inline-flex;align-items:center;font-weight:600;font-size:12.5px;padding:8px 16px;border-radius:var(--r-md);background:var(--blue-800);color:#fff;white-space:nowrap;transition:background .2s}
+.nav-cta:hover{background:#1040C0}
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--blue-950),var(--blue-900) 55%,var(--blue-800));color:#fff;padding:140px 28px 84px}
+.hero .orb{position:absolute;border-radius:50%;pointer-events:none;animation:drift 14s ease-in-out infinite alternate}
+.hero .o1{width:540px;height:540px;background:radial-gradient(circle,rgba(41,151,216,.22),transparent 65%);top:-200px;right:-120px}
+.hero .o2{width:420px;height:420px;background:radial-gradient(circle,rgba(115,194,236,.12),transparent 65%);bottom:-200px;left:-100px;animation-delay:-7s}
+@keyframes drift{from{transform:translate3d(0,0,0)}to{transform:translate3d(24px,18px,0)}}
+.hero-in{max-width:860px;margin:0 auto;position:relative;z-index:2}
+.kicker{font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--sky-400);display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.kicker::before{content:"";width:28px;height:1.5px;background:var(--sky-400)}
+h1{font-family:var(--f-display);font-weight:400;font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.12;margin-bottom:14px}
+h1 em{font-style:italic;color:var(--sky-400)}
+.persona{font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sky-300);margin-bottom:22px}
+.hero p.lead{font-size:17.5px;line-height:1.75;color:var(--blue-200);max-width:640px}
+main{max-width:860px;margin:0 auto;padding:24px 28px 0}
+.step{position:relative;padding:56px 0 56px 76px;border-left:1.5px solid var(--gray-100);margin-left:22px;opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.16,1,.3,1)}
+.step.in{opacity:1;transform:none}
+.step:last-of-type{border-left-color:transparent}
+.step-num{position:absolute;left:-23px;top:52px;width:44px;height:44px;border-radius:50%;background:#fff;border:1.5px solid var(--blue-200);color:var(--blue-800);font-family:var(--f-mono);font-size:13px;display:flex;align-items:center;justify-content:center}
+.step h2{font-family:var(--f-display);font-weight:400;font-size:clamp(1.45rem,2.6vw,1.9rem);color:var(--blue-800);line-height:1.2;margin-bottom:14px}
+.step h2 em{font-style:italic}
+.step p{margin-bottom:12px;font-size:15px}
+.step p:last-child{margin-bottom:0}
+.step ul{margin:10px 0 12px;padding-left:0;list-style:none}
+.step li{position:relative;padding:7px 0 7px 26px;font-size:14.5px}
+.step li::before{content:"—";position:absolute;left:0;color:var(--sky-600)}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.chip{display:inline-flex;align-items:center;background:var(--blue-50);border:1px solid var(--blue-200);color:var(--blue-800);border-radius:var(--r-pill);font-size:11.5px;font-weight:500;padding:4px 11px}
+.notice{background:#FEF9E7;border:1px solid #F3E2A8;border-radius:var(--r-lg);padding:18px 20px;font-size:12.5px;line-height:1.7;color:#7D5A00;margin-top:18px}
+.notice b{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.stats{background:var(--blue-950);border-radius:24px;padding:40px 36px;margin:26px 0 10px;color:#fff;position:relative;overflow:hidden}
+.stats::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(41,151,216,.16),transparent 65%);top:-180px;right:-120px}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;position:relative;z-index:2}
+.stat{padding:20px 24px;border-left:1px solid rgba(115,194,236,.16);border-top:1px solid rgba(115,194,236,.16)}
+.stat:nth-child(odd){border-left:0;padding-left:0}
+.stat:nth-child(-n+2){border-top:0;padding-top:0}
+.stat:nth-last-child(-n+2){padding-bottom:0}
+.stat .v{font-family:var(--f-mono);font-size:clamp(1.5rem,3vw,2.1rem);color:#fff;font-variant-numeric:tabular-nums;line-height:1.15}
+.stat .v em{font-style:normal;color:var(--sky-400)}
+.stat .l{font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--sky-400);margin-bottom:8px;display:block}
+.stat .n{font-size:11.5px;color:var(--blue-200);margin-top:6px;line-height:1.5}
+.cta{background:linear-gradient(160deg,var(--blue-900),var(--blue-800));border-radius:24px;color:#fff;text-align:center;padding:52px 32px;margin:48px 0 24px}
+.cta h3{font-family:var(--f-display);font-weight:400;font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:10px}
+.cta h3 em{font-style:italic;color:var(--sky-400)}
+.cta p{color:var(--blue-200);font-size:14.5px;max-width:520px;margin:0 auto 26px;text-wrap:balance}
+.cta .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-weight:600;font-size:14.5px;padding:13px 26px;border-radius:var(--r-lg);transition:transform .2s,box-shadow .2s;min-height:44px}
+.btn:hover{transform:translateY(-1px);box-shadow:var(--sh-md)}
+.btn-w{background:#fff;color:var(--blue-800)}
+.btn-o{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-o:hover{border-color:#fff}
+.foot{max-width:860px;margin:0 auto;padding:8px 28px 44px;font-size:11px;line-height:1.7;color:var(--gray-400)}
+.foot a{color:var(--gray-500);text-decoration:underline}
+.foot .links{margin-bottom:10px;font-size:12px}
+.foot .links a{margin-right:16px;text-decoration:none;color:var(--blue-800);font-weight:600}
+@media(max-width:480px){
+.stats-grid{grid-template-columns:1fr}
+.stat{border-left:0;padding-left:0;padding-right:0;border-top:1px solid rgba(115,194,236,.16)}
+.stat:first-child{border-top:0;padding-top:0}
+.stat:nth-child(2){border-top:1px solid rgba(115,194,236,.16);padding-top:20px}
+.stat:nth-last-child(-n+2){padding-bottom:20px}
+.stat:last-child{padding-bottom:0}
+}
+@media(max-width:640px){.nav-tag{display:none}.hero{padding:120px 22px 64px}main{padding:18px 22px 0}
+.step{padding:44px 0 44px 54px;margin-left:14px}.step-num{left:-19px;width:36px;height:36px;font-size:11.5px;top:42px}
+.stats{padding:30px 22px}.cta .row .btn{width:100%}}
+</style>
+</head>
+<body>
+<div class="progress" id="bar" aria-hidden="true"></div>
+<header class="nav"><div class="nav-in"><a class="nav-back" href="../index.html"><span>&larr;</span>Canine&nbsp;Capital</a><span class="nav-tag">The Library &middot; 1 / 18 &middot; Reg D 506(c)</span><a class="nav-cta" href="../index.html#offerings">View the Roster &rarr;</a></div></header>
+<section class="hero"><div class="orb o1"></div><div class="orb o2"></div><div class="hero-in"><p class="kicker">The Library &middot; No. 01</p><h1>Regulation D <em>506(c)</em></h1><p class="persona">For the Accredited &amp; Institutional Investor</p><p class="lead">The workhorse of American private capital. Rule 506(c) lets issuers speak openly about a private offering &mdash; provided every investor who subscribes is verified accredited. It is the framework behind Canine Capital&rsquo;s 2026 institutional vintage.</p></div></section>
+<main>
+<section class="step"><span class="step-num">01</span><h2>What 506(c) <em>Is</em></h2><p>Regulation D is the SEC&rsquo;s framework for private placements &mdash; securities sold without a public registration. Rule 506(c), created by Title II of the JOBS Act in 2013, did something previous private placements could not: it allowed issuers to market an offering publicly (&ldquo;general solicitation&rdquo;), so long as every purchaser is an accredited investor whose status the issuer takes reasonable steps to verify.</p><p>There is no cap on the amount an issuer may raise under 506(c), and the securities are &ldquo;restricted&rdquo; &mdash; they cannot be freely resold without an exemption or registration. Issuers file a Form D notice with the SEC.</p><div class="chips"><span class="chip">JOBS Act · Title II (2013)</span><span class="chip">General solicitation permitted</span><span class="chip">No raise cap</span><span class="chip">Form D notice</span><span class="chip">Restricted securities</span></div></section>
+<section class="step"><span class="step-num">02</span><h2>Who It&rsquo;s <em>For</em></h2><p>Accredited investors are the gate. For individuals, that means net worth above $1&nbsp;million excluding a primary residence, or income above $200,000 ($300,000 jointly) in each of the last two years &mdash; or certain professional licenses. Entities qualify by assets or by being composed entirely of accredited owners.</p><p>Above accredited sit larger classifications &mdash; Qualified Purchasers ($5M+ in investments) and Qualified Institutional Buyers ($100M+ in securities) &mdash; the institutions for which the 2026 vintage&rsquo;s institutional allocations were designed.</p><div class="stats"><div class="stats-grid"><div class="stat"><span class="l">Net Worth Test</span><div class="v">$<span data-counter="1" >0</span>M+</div><div class="n">Excluding primary residence — or $200K/$300K income test</div></div><div class="stat"><span class="l">Qualified Purchaser</span><div class="v">$<span data-counter="5">0</span>M+</div><div class="n">In investments</div></div><div class="stat"><span class="l">QIB</span><div class="v">$<span data-counter="100">0</span>M+</div><div class="n">In managed securities</div></div><div class="stat"><span class="l">Since</span><div class="v"><span data-counter="2013">0</span></div><div class="n">General solicitation legalized</div></div></div></div></section>
+<section class="step"><span class="step-num">03</span><h2>How Verification <em>Works</em></h2><p>Under 506(c), self-certification is not enough. Issuers must take reasonable steps to verify status &mdash; typically income documentation, asset statements, or a letter from a CPA, attorney, or registered adviser. At Canine Capital, verification happens before gated document access, through the platform&rsquo;s compliance rails.</p><ul><li>Verify — accreditation evidence reviewed before access</li><li>Review — offering documents, roster terms, risk factors</li><li>Subscribe — execution and escrow through banking rails</li><li>Fund — settlement and bondholder onboarding</li></ul><div class="chips"><span class="chip">Dalmore Group · broker-dealer</span><span class="chip">Mercury · banking rails</span><span class="chip">Verification before access</span></div></section>
+<section class="step"><span class="step-num">04</span><h2>At <em>Canine Capital</em></h2><p>The 2026 vintage — Series A (3-year), Series B (5-year), Series C (perpetual, Self-Directed IRA, Growth election), and the Series PN Promissory Note — is offered under Rule 506(c) by Canine Capital Private Fund I, LLC (SEC CIK 2123138), with fixed contractual coupons of 14.0% (10.5% on the perpetual Series C) and $50,000 minimums in $1,000 bond denominations.</p><p>Every facility the proceeds fund is dual-asset backed — operating cash flow plus real estate and hard collateral — underwritten by the platform&rsquo;s agentic credit engine and governed by people.</p><div class="chips"><span class="chip">2026 Series A · B · C · PN</span><span class="chip">14.0% / 10.5% fixed coupons</span><span class="chip">$50,000 minimum</span><span class="chip">SEC CIK 2123138</span></div></section>
+<div class="cta"><h3>Verified and <em>ready?</em></h3><p>The 2026 institutional vintage is issued and open to verified accredited investors. Review the roster, then start verification.</p><div class="row"><a class="btn btn-w" href="../index.html#offerings">View the Securities Roster &rarr;</a><a class="btn btn-o" href="../index.html#contact">Speak with Canine Capital</a></div></div>
+</main>
+<footer class="foot"><p class="links"><a href="../index.html">Home</a><a href="../index.html#library">The Library</a><a href="../disclosures.html">Disclosures</a></p><p>Educational overview for general information only &mdash; not legal, tax, immigration, or investment advice, and not an offer or solicitation to buy or sell any security. Offerings, if made, are conducted only through each series&rsquo; offering documents under applicable exemptions. All investments involve risk, including possible loss of principal. See <a href="../disclosures.html">Important Regulatory and Disclosure Information</a>. &copy; 2026 Canine Capital. All rights reserved.</p></footer>
+<script>
+(function(){
+"use strict";
+var bar = document.getElementById('bar');
+window.addEventListener('scroll', function(){
+  var max = document.documentElement.scrollHeight - window.innerHeight;
+  bar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+}, {passive:true});
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+}, {rootMargin:'0px 0px -10% 0px', threshold:.05});
+document.querySelectorAll('.step').forEach(function(s){ io.observe(s); });
+if(/[?&]qa=1/.test(location.search) || matchMedia('(prefers-reduced-motion: reduce)').matches){
+  document.querySelectorAll('.step').forEach(function(s){ s.classList.add('in'); s.style.transition = 'none'; });
+}
+function counter(el){
+  var t = parseFloat(el.getAttribute('data-counter')), d = parseInt(el.getAttribute('data-decimals')||'0',10);
+  var commas = el.hasAttribute('data-commas'), t0 = null;
+  if(/[?&]qa=1/.test(location.search) || matchMedia('(prefers-reduced-motion: reduce)').matches){
+    el.textContent = commas ? Math.round(t).toLocaleString('en-US') : t.toFixed(d); return;
+  }
+  function step(ts){ if(!t0) t0 = ts; var p = Math.min((ts - t0)/1300, 1), e = 1 - Math.pow(1-p,3), v = t*e;
+    el.textContent = commas ? Math.round(v).toLocaleString('en-US') : v.toFixed(d);
+    if(p < 1) requestAnimationFrame(step); }
+  requestAnimationFrame(step);
+}
+var cio = new IntersectionObserver(function(es){
+  es.forEach(function(en){ if(en.isIntersecting){ counter(en.target); cio.unobserve(en.target); } });
+},{threshold:.5});
+document.querySelectorAll('[data-counter]').forEach(function(el){ cio.observe(el); });
+})();
+</script>
+</body>
+</html>

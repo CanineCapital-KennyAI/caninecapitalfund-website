@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Non-Bank Financial Institution — The Library · Canine Capital</title>
+<meta name="description" content="What an NBFI is, the famous companies that were or still are one — SoFi, PayPal, Rocket, LendingClub, Block, Affirm — and why bond-funded non-bank lending matters to investors.">
+<link rel="canonical" href="https://www.caninecapitalfund.com/learn/the-nbfi.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230530AD'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='white' text-anchor='middle' font-weight='bold'%3ECC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Sora:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--cc-blue:#0530AD;--cc-sky:#2997D8;--blue-50:#F0F6FF;--blue-100:#E0EDFD;--blue-200:#C0D8FA;--blue-300:#90B5F4;
+--blue-800:#0530AD;--blue-900:#041A63;--blue-950:#020C2E;--sky-100:#E4F5FD;--sky-300:#A0D7F4;--sky-400:#73C2EC;
+--sky-600:#2997D8;--sky-700:#1E7DB5;--sky-800:#145C87;--gray-50:#F6F7FA;--gray-100:#ECEDF4;--gray-200:#D8DAE6;
+--gray-400:#8E91A8;--gray-500:#636682;--gray-600:#474A62;--gray-700:#2E3042;--gray-900:#111218;--gray-950:#0A0B0F;
+--f-display:'Playfair Display',Georgia,serif;--f-body:'Sora',system-ui,sans-serif;--f-mono:'IBM Plex Mono',monospace;
+--r-md:8px;--r-lg:12px;--r-xl:18px;--r-pill:9999px;
+--sh-md:0 4px 16px rgba(5,48,173,.10),0 2px 6px rgba(5,48,173,.06)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--f-body);font-size:16px;line-height:1.7;color:var(--gray-600);background:#fff;-webkit-font-smoothing:antialiased}
+a{color:var(--blue-800);text-decoration:none}
+:focus-visible{outline:3px solid var(--sky-400);outline-offset:2px;border-radius:2px}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--blue-800),var(--sky-600));z-index:100}
+.nav{position:fixed;top:0;left:0;right:0;height:60px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--gray-100);z-index:90;display:flex;align-items:center}
+.nav-in{max-width:1100px;margin:0 auto;padding:0 28px;width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.nav-back{font-weight:700;letter-spacing:.06em;font-size:13px;color:var(--blue-800);text-transform:uppercase;white-space:nowrap}
+.nav-back span{color:var(--sky-600);margin-right:8px}
+.nav-tag{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;color:var(--gray-400);text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-cta{display:inline-flex;align-items:center;font-weight:600;font-size:12.5px;padding:8px 16px;border-radius:var(--r-md);background:var(--blue-800);color:#fff;white-space:nowrap;transition:background .2s}
+.nav-cta:hover{background:#1040C0}
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--blue-950),var(--blue-900) 55%,var(--blue-800));color:#fff;padding:140px 28px 84px}
+.hero .orb{position:absolute;border-radius:50%;pointer-events:none;animation:drift 14s ease-in-out infinite alternate}
+.hero .o1{width:540px;height:540px;background:radial-gradient(circle,rgba(41,151,216,.22),transparent 65%);top:-200px;right:-120px}
+.hero .o2{width:420px;height:420px;background:radial-gradient(circle,rgba(115,194,236,.12),transparent 65%);bottom:-200px;left:-100px;animation-delay:-7s}
+@keyframes drift{from{transform:translate3d(0,0,0)}to{transform:translate3d(24px,18px,0)}}
+.hero-in{max-width:860px;margin:0 auto;position:relative;z-index:2}
+.kicker{font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--sky-400);display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.kicker::before{content:"";width:28px;height:1.5px;background:var(--sky-400)}
+h1{font-family:var(--f-display);font-weight:400;font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.12;margin-bottom:14px}
+h1 em{font-style:italic;color:var(--sky-400)}
+.persona{font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sky-300);margin-bottom:22px}
+.hero p.lead{font-size:17.5px;line-height:1.75;color:var(--blue-200);max-width:640px}
+main{max-width:860px;margin:0 auto;padding:24px 28px 0}
+.step{position:relative;padding:56px 0 56px 76px;border-left:1.5px solid var(--gray-100);margin-left:22px;opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.16,1,.3,1)}
+.step.in{opacity:1;transform:none}
+.step:last-of-type{border-left-color:transparent}
+.step-num{position:absolute;left:-23px;top:52px;width:44px;height:44px;border-radius:50%;background:#fff;border:1.5px solid var(--blue-200);color:var(--blue-800);font-family:var(--f-mono);font-size:13px;display:flex;align-items:center;justify-content:center}
+.step h2{font-family:var(--f-display);font-weight:400;font-size:clamp(1.45rem,2.6vw,1.9rem);color:var(--blue-800);line-height:1.2;margin-bottom:14px}
+.step h2 em{font-style:italic}
+.step p{margin-bottom:12px;font-size:15px}
+.step p:last-child{margin-bottom:0}
+.step ul{margin:10px 0 12px;padding-left:0;list-style:none}
+.step li{position:relative;padding:7px 0 7px 26px;font-size:14.5px}
+.step li::before{content:"—";position:absolute;left:0;color:var(--sky-600)}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.chip{display:inline-flex;align-items:center;background:var(--blue-50);border:1px solid var(--blue-200);color:var(--blue-800);border-radius:var(--r-pill);font-size:11.5px;font-weight:500;padding:4px 11px}
+.notice{background:#FEF9E7;border:1px solid #F3E2A8;border-radius:var(--r-lg);padding:18px 20px;font-size:12.5px;line-height:1.7;color:#7D5A00;margin-top:18px}
+.notice b{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.stats{background:var(--blue-950);border-radius:24px;padding:40px 36px;margin:26px 0 10px;color:#fff;position:relative;overflow:hidden}
+.stats::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(41,151,216,.16),transparent 65%);top:-180px;right:-120px}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;position:relative;z-index:2}
+.stat{padding:20px 24px;border-left:1px solid rgba(115,194,236,.16);border-top:1px solid rgba(115,194,236,.16)}
+.stat:nth-child(odd){border-left:0;padding-left:0}
+.stat:nth-child(-n+2){border-top:0;padding-top:0}
+.stat:nth-last-child(-n+2){padding-bottom:0}
+.stat .v{font-family:var(--f-mono);font-size:clamp(1.5rem,3vw,2.1rem);color:#fff;font-variant-numeric:tabular-nums;line-height:1.15}
+.stat .v em{font-style:normal;color:var(--sky-400)}
+.stat .l{font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--sky-400);margin-bottom:8px;display:block}
+.stat .n{font-size:11.5px;color:var(--blue-200);margin-top:6px;line-height:1.5}
+.cta{background:linear-gradient(160deg,var(--blue-900),var(--blue-800));border-radius:24px;color:#fff;text-align:center;padding:52px 32px;margin:48px 0 24px}
+.cta h3{font-family:var(--f-display);font-weight:400;font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:10px}
+.cta h3 em{font-style:italic;color:var(--sky-400)}
+.cta p{color:var(--blue-200);font-size:14.5px;max-width:520px;margin:0 auto 26px;text-wrap:balance}
+.cta .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-weight:600;font-size:14.5px;padding:13px 26px;border-radius:var(--r-lg);transition:transform .2s,box-shadow .2s;min-height:44px}
+.btn:hover{transform:translateY(-1px);box-shadow:var(--sh-md)}
+.btn-w{background:#fff;color:var(--blue-800)}
+.btn-o{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-o:hover{border-color:#fff}
+.foot{max-width:860px;margin:0 auto;padding:8px 28px 44px;font-size:11px;line-height:1.7;color:var(--gray-400)}
+.foot a{color:var(--gray-500);text-decoration:underline}
+.foot .links{margin-bottom:10px;font-size:12px}
+.foot .links a{margin-right:16px;text-decoration:none;color:var(--blue-800);font-weight:600}
+@media(max-width:480px){
+.stats-grid{grid-template-columns:1fr}
+.stat{border-left:0;padding-left:0;padding-right:0;border-top:1px solid rgba(115,194,236,.16)}
+.stat:first-child{border-top:0;padding-top:0}
+.stat:nth-child(2){border-top:1px solid rgba(115,194,236,.16);padding-top:20px}
+.stat:nth-last-child(-n+2){padding-bottom:20px}
+.stat:last-child{padding-bottom:0}
+}
+@media(max-width:640px){.nav-tag{display:none}.hero{padding:120px 22px 64px}main{padding:18px 22px 0}
+.step{padding:44px 0 44px 54px;margin-left:14px}.step-num{left:-19px;width:36px;height:36px;font-size:11.5px;top:42px}
+.stats{padding:30px 22px}.cta .row .btn{width:100%}}
+
+.nb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:18px 0 8px}
+.nb{background:#fff;border:1px solid var(--gray-200);border-radius:var(--r-lg);padding:16px 18px;display:flex;gap:12px;align-items:flex-start}
+.nb img{width:26px;height:26px;border-radius:6px;flex:0 0 26px;margin-top:2px}
+.nb b{display:block;font-size:14px;color:var(--gray-900)}
+.nb .arc{display:inline-block;font-family:var(--f-mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;border-radius:var(--r-pill);padding:2px 9px;margin:5px 0 6px}
+.nb .arc.was{background:#FEF9E7;color:#7D5A00}
+.nb .arc.is{background:var(--sky-100);color:var(--sky-800)}
+.nb span.d{font-size:12px;color:var(--gray-500);line-height:1.55;display:block}
+.tmnote{font-size:10.5px;color:var(--gray-400);line-height:1.6;margin-top:10px}
+.vs{margin:18px 0 6px}
+.vs-row{margin-bottom:18px}
+.vs-row .t{display:flex;justify-content:space-between;gap:10px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-400);margin-bottom:9px}
+.bar{display:grid;grid-template-columns:120px 1fr 64px;gap:10px;align-items:center;margin-bottom:7px}
+.bar .who{font-family:var(--f-mono);font-size:10px;color:var(--gray-500);text-transform:uppercase;letter-spacing:.06em}
+.bar .tr{height:10px;background:var(--gray-100);border-radius:var(--r-pill);overflow:hidden}
+.bar .tr i{display:block;height:100%;width:0;border-radius:var(--r-pill);transition:width 1.1s cubic-bezier(.16,1,.3,1) .25s}
+.bar.a .tr i{background:var(--gray-300)}
+.bar.b .tr i{background:linear-gradient(90deg,var(--blue-800),var(--sky-600))}
+.bar .val{font-family:var(--f-mono);font-size:12px;color:var(--gray-900);text-align:right;white-space:nowrap}
+.step.in .tr i{width:var(--w)}
+.ladder{margin:18px 0 6px;border-left:1.5px solid var(--gray-100)}
+.lad{position:relative;padding:11px 0 11px 26px}
+.lad::before{content:"";position:absolute;left:-5px;top:19px;width:8.5px;height:8.5px;border-radius:50%;background:var(--blue-200)}
+.lad.hot::before{background:var(--sky-600);box-shadow:0 0 12px rgba(41,151,216,.7)}
+.lad .y{font-family:var(--f-mono);font-size:11px;color:var(--sky-700);display:block;margin-bottom:2px}
+.lad b{font-size:14px;color:var(--gray-900)}
+.lad span.d{font-size:12.5px;color:var(--gray-500);display:block;line-height:1.55}
+.vignette{background:linear-gradient(160deg,var(--blue-950),var(--blue-900));border-radius:var(--r-xl);color:#fff;padding:30px 32px;margin:20px 0 8px;position:relative;overflow:hidden}
+.vignette::after{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(41,151,216,.18),transparent 65%);top:-160px;right:-110px}
+.vignette .vk{font-family:var(--f-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--sky-400);display:block;margin-bottom:12px;position:relative;z-index:2}
+.vignette p{position:relative;z-index:2;font-family:var(--f-display);font-size:clamp(1.1rem,2vw,1.35rem);line-height:1.6;color:#fff}
+.vignette p em{font-style:italic;color:var(--sky-400)}
+.vignette .src{position:relative;z-index:2;display:flex;align-items:center;gap:9px;margin-top:16px;font-size:11.5px;color:var(--blue-200);font-family:var(--f-body)}
+.vignette .src img{width:20px;height:20px;border-radius:5px}
+</style>
+</head>
+<body>
+<div class="progress" id="bar" aria-hidden="true"></div>
+<header class="nav"><div class="nav-in"><a class="nav-back" href="../index.html"><span>&larr;</span>Canine&nbsp;Capital</a><span class="nav-tag">The Library &middot; 13 / 18 &middot; The NBFI</span><a class="nav-cta" href="../index.html#offerings">View the Roster &rarr;</a></div></header>
+<section class="hero"><div class="orb o1"></div><div class="orb o2"></div><div class="hero-in"><p class="kicker">The Library &middot; No. 13</p><h1>The <em>NBFI</em></h1><p class="persona">Banking&rsquo;s Unbound Sibling — the Non-Bank Financial Institution</p><p class="lead">No branches, no deposits, no charter &mdash; and yet NBFIs wrote most of the last twenty years of financial innovation. SoFi was one. PayPal still is. Here is how the structure works, and why Canine Capital chose it on purpose.</p></div></section>
+<main>
+<section class="step"><span class="step-num">01</span><h2>Banking, <em>Unbundled</em></h2><p>A Non-Bank Financial Institution provides credit and financial services without a banking charter &mdash; no deposits, no branches, no FDIC wrapper. Its balance sheet is funded by capital markets instead of depositors, and its lending is governed by lending law and securities law rather than bank regulation.</p><p>That single design choice &mdash; capital markets instead of deposits &mdash; is why NBFIs are where most financial innovation of the last two decades actually happened. Today, non-bank lenders originate a major share of American credit.</p><div class="chips"><span class="chip">No deposits</span><span class="chip">Capital-markets funded</span><span class="chip">Lending &amp; securities law</span><span class="chip">Specialist by design</span></div></section>
+<section class="step"><span class="step-num">02</span><h2>You Already Know <em>NBFIs</em></h2><p>The names in your phone were &mdash; or still are &mdash; NBFIs:</p><div class="nb-grid"><div class="nb"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAWlBMVEUAosf///8AoMYAnsUAm8MAmcIAlcD8//97wtnc8fcRpcme1ubM5e9ivddRt9Tk9PiW0eNtvtc7sdAmrM2IzeHz+/14x9253+uq2ejK6vK+5O7F5e/T6/Ps+vzVxvUtAAAC/UlEQVRYhe1W27arKgw1AW9YFVFaFfv/v7mjqFALXWufM/Zb85aBM0KSmcwk+drX/oUhQ/Rcxi6HP8C56IomOUDIVFGoE8SwKTrBP8BZb3IA0NJCeNeSB21tMVith2B6FsU3sFspVrc63GqFiBJa2RUzQBOL0MNpCyZscO7AElxAcsoPbzT0kfcbh4A767XzdM86GPlxTxPOg8i9AFN6Bz9eOmnhfiRCeOx8BGQP33tksBy/xQG6UDVZ8Rrg5nu3DOYzQA1FKI3Y+IhnNvrumOn2ADEJTbCf0M/Bg9d+gJrPoHZUWuZJMICrO5lCbJ1XIioq7QbjEmSkEbA8EfQJNueNcroyhS8V41yMFC6Mp0JOO2JrPdboA8/s06GdFw1LsIj7HbopB/1Q9oooJN2prIT9I1OPJzXI/SMhWZplGT8/4eSmZ9shp8M0SqUN398ft7HeJwKxWd7McPAZsR5vj3ucjIQf7KtLyzdcyUGZnO1hY8uih2gEXvlpx6SESQmhzFpFvyhVZKag1zq5SNhMFEIyopVhifDIGaQC3dHrHPqLApPag3QCRe3jrA0/Qvm9W6bD2bvUhTIt/VMVvMCFjSYXRwCxstG3IBvf6ewC5OYXAa5PkP4Thl884TWJkpI4HUk0lESfqpEk+jONBiAzrowze5mYdYQOl0Yidpu1kSYok181kmvldl8d89bJYLYfssam4UMrB8g0mJv8CzL9fzrjnWbS0w2Uah0o0g0UDfkUIcJmYgG9zC3YqcmOtGk70o4UT9GRRmkfBedMletQvA5Vx6bYUKVP5PZepE2s0JvR0K5j3VkVzAMmebm3Hn09XxeLvyrz8GJq3MJgrb6utqfvBlcbsfFsUVpkb8vVt/By7WA4Ayzv6923cCmFUx5CvwsMPwfhQpLy2DnAR+iuEsePF5E4JLJ0wxEZDdCgyDotIrI2mTcXnWxjMu+oQVwo9ptQy6tdaNZWaHa70JTro/IPQjPZpS7GpG7yk9S1oJcSvYht/Flsf+1r/83+AGyNI9t1f2NlAAAAAElFTkSuQmCC" alt="" loading="lazy"><div><b>SoFi</b><span class="arc was">NBFI 2011 &rarr; bank 2022</span><span class="d">Born a non-bank student-loan refinancer; earned a national bank charter in 2022.</span></div></div><div class="nb"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAn1BMVEX///8AKZFgzf8AjP8ANp/X8/+v5v8kpP+frtX1/P900/+/yePr+f9q0P/D7P8QN5ggRJ+Qoc9AX60qqP9+1v+AlMhQbbMwUqbP1+rv8vgAc+Owvd1Ivf9Uxf8MlP9ayf8GkP/f5PFwh8Hh9f8AQq0AYc9IpOMYUq2R3P9geroATrpuvvgAVcE2sf8eXLMwe8hCmd0qccE2hc99rNyl4//LCfhEAAABlElEQVRYhe2VWVPCQBCEwwgRQQgSkHAlKB6A9/H/f5uk0J0hyfQuW1q+0I8U/e1OOj0JgqOO+iMNa0VFo/X0AMBlCZCr13QGjCoBW8SVI0DxbwmJkz9RAY53aOuAWt8FcAEAtbYD4BoBXK7QR4BobAdE5t/1gvLf7EGM+bjJSUGTTd3+OokQiv5cD+c2wNT4b6oAs9bSAhhiwJyoiwFcpccKf0pEHXwHrtJtBSDeAmgAASCE3QSEhxBV0i5AtAKAKQKk2Q5AZzqAq1QOYTH/9lNDB6wNYKP70UPgKhVDSNmPAFylQghxxn4wglKlRTwjKf0hiiqdGj3Nsj07epM4hB7pAo+A99mz7m+BSnMILzog1P2iSq/6BYBfVOnOZwBZpUzx423AVYp8zpf77L76+BD0MBfvs7eq0212meK7sa3CnbrWhR7IKnEIliW8J1ElDgEsj5K4SnWe3Dq3EFeJQ+gc4A+S5o8+DAB/BFSFBvDpB1gZAKoe0MArBCG/EFhLvxBY3d8LAX1Hgf4/hIaRXwhHHaQvk5wYMelrzTYAAAAASUVORK5CYII=" alt="" loading="lazy"><div><b>PayPal</b><span class="arc is">Still non-bank (U.S.)</span><span class="d">Moves hundreds of billions in payments and credit &mdash; no U.S. banking charter.</span></div></div><div class="nb"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAJFBMVEVHcEzeM0HeM0HeM0HeM0HfM0HeM0HeM0HeM0HeM0HeMkHeM0GGRRiQAAAAC3RSTlMARInGaBDypjTgIjlxQzgAAAFxSURBVFiF7VbbrsMwCBsNufb//3drtUrBgYRqD0dnml9TG3Ah4fH44btBnMOJzBRvsznsAoHvaJS8K8jFSW8q/UyjefibRT+wLekxzPj7XhdJlDTnv0AzPi3pL/CH/EkOxcc3FeK6/gt6Uy387xE0Pvv5upF3+FoRSv+mzKW1wlkxJyO/jfQuTR4lsCOHCYAQQ4KYAoYYXEKPkzzGHlSmDhVkN0GGg0XLb6ACvdPkR6KGuCzgABjdRyH7qIdtgjRI7fQDclr6HyWTMy8++zN5Yl457BQwbxz6c4GPS7BNZJ9ANb0uLgG4M8Rb6xKAabKTMwTg2ajicHMISAegX8taAJ8NWDfqSgD5Fc55LkCQvzIwaSJA46uX8Js+BRTQXn1lYqspoDy76ICMM3owKKg+b5PTaQ8McRSBKBSsS/NaUbT8+vUlmVvv+yu1wOjgX5nqrXwNc51u3eeiOp3GsNraN/s+INt/EciOQcG78f/wz/AEPyM7vVNNccsAAAAASUVORK5CYII=" alt="" loading="lazy"><div><b>Rocket Mortgage</b><span class="arc is">Non-bank lender</span><span class="d">America&rsquo;s largest mortgage originator. Never a bank.</span></div></div><div class="nb"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAK0lEQVQ4jWO8qq7+nwEKtG/eZCSVz8RAIaDYAIoBhp/QFYzEMBhNByMyDADi+jwVt8KrWQAAAABJRU5ErkJggg==" alt="" loading="lazy"><div><b>LendingClub</b><span class="arc was">NBFI 2007 &rarr; bank 2021</span><span class="d">Marketplace-lending pioneer; bought Radius Bank to graduate.</span></div></div><div class="nb"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABgElEQVRYhe3Xv0ocURQG8N+uo5uoBG0sBBsfQxQiCGJjcBsb30IfQF/DRuy0UJCQIkEUsfIxLAOBRPC/qClmB+LuzDgzzs5a5INbne+e75t7z71zbs1LLGIJo3jCs/IQ4ALfsBsX3GsJVjG+o/Gvgf0KxaNxHInP9kA8Gs06mu37USGWA4ynEJ5xhb6CAo8YQi0hPhSkJD/AKq7faGAQ61iJid+RXP2TBUXjMNISa9fYq6dMGijRQD8e4gJVGWgkaaUZqARBTn4NC/ikc0n7cYkfuO+WgTnhXZ6GRXzNmjDvFoxl4AznSZjXwG0GTublL2KgdPw3kNfAxwycxuuU4gbOM3B+50mY9x44xWfhL7y92gfwC0fdNAAnBeYk4l0X4U2JOrfCNj+XgaJdUByehD+rDgSS62ATa7Jdv2kIsCGhvwgkdCqYwdkbxV9Doy7b2e4W/sCU3j1M5iMn2z0Q72hatioU39E6Ze0vlml8wQQ+CB8WZaBPeJp+Cr/8MAr8Bb7H5luNxN1qAAAAAElFTkSuQmCC" alt="" loading="lazy"><div><b>Block (Square)</b><span class="arc was">NBFI &rarr; ILC 2021</span><span class="d">Built the seller economy non-bank; chartered an industrial bank in 2021.</span></div></div><div class="nb"><img src="data:image/png;base64,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" alt="" loading="lazy"><div><b>Affirm</b><span class="arc is">Still non-bank</span><span class="d">Buy-now-pay-later at national scale through partner banks.</span></div></div></div><p class="tmnote">Logos shown for educational context only. All trademarks are the property of their respective owners; no affiliation with, or endorsement of, Canine Capital is implied.</p></section>
+<section class="step"><span class="step-num">03</span><h2>Non-Bank <em>by Design</em></h2><p>Some NBFIs graduate to charters. Others stay non-bank on purpose &mdash; because the structure is the advantage: specialization instead of universal banking, speed instead of branch overhead, and funding that is chosen deliberately rather than gathered from depositors.</p><ul><li>Specialists out-underwrite generalists in their lane</li><li>No deposit franchise to defend &mdash; no conflict between savers and borrowers</li><li>Capital raised on stated terms from investors who chose the risk</li><li>Regulated where it matters: lending law, securities law, state licensure</li></ul></section>
+<section class="step"><span class="step-num">04</span><h2>Bonds, Not <em>Deposits</em></h2><p>Here is the elegant part for a fixed-income investor: at a bond-funded NBFI, you are not standing behind a depositor &mdash; you are the balance sheet. Canine Capital funds its credit facilities by issuing Institutional-Credit Bonds&trade; with fixed contractual coupons, then lends that capital against dual-asset collateral.</p><p>No fractional reserve. No duration mismatch with checking accounts. A defined pool of obligations, a defined book of collateralized credit, and offering documents that govern both.</p><div class="stats"><div class="stats-grid"><div class="stat"><span class="l">Funding</span><div class="v">Bonds</div><div class="n">Capital markets &mdash; not deposits</div></div><div class="stat"><span class="l">Your Position</span><div class="v">Creditor</div><div class="n">Fixed contractual coupons, $1,000 denominations</div></div><div class="stat"><span class="l">Collateral</span><div class="v">Dual-Asset</div><div class="n">Cash flow + real estate &amp; hard assets</div></div><div class="stat"><span class="l">Coupons</span><div class="v">7.5&ndash;14.0%</div><div class="n">Per the current securities roster</div></div></div></div></section>
+<section class="step"><span class="step-num">05</span><h2>At <em>Canine Capital</em></h2><p>Canine Capital is an NBFI by design &mdash; and AI-native by construction: a specialist non-bank built for one industry, run by agents, governed by people, and funded by the investors on its roster.</p><p>SoFi proved a non-bank could out-build the banks. PayPal proved it could out-scale them. The next chapter is specialist NBFIs that out-know them &mdash; one vertical at a time.</p><div class="chips"><span class="chip">NBFI by design</span><span class="chip">AI-native by construction</span><span class="chip">One vertical, known completely</span></div></section>
+<div class="cta"><h3>Non-bank, <em>on purpose.</em></h3><p>See what a bond-funded, AI-native NBFI looks like on paper — the roster is the balance sheet.</p><div class="row"><a class="btn btn-w" href="../index.html#offerings">View the Securities Roster &rarr;</a><a class="btn btn-o" href="../index.html#library">Continue in the Library</a></div></div>
+</main>
+<footer class="foot"><p class="links"><a href="../index.html">Home</a><a href="../index.html#library">The Library</a><a href="../disclosures.html">Disclosures</a></p><p>Educational overview for general information only &mdash; not legal, financial, or investment advice, and not an offer or solicitation to buy or sell any security. Offerings, if made, are conducted only through each series&rsquo; offering documents under applicable exemptions. All investments involve risk, including possible loss of principal. See <a href="../disclosures.html">Important Regulatory and Disclosure Information</a>. &copy; 2026 Canine Capital. All rights reserved.</p></footer>
+<script>
+(function(){
+"use strict";
+var bar = document.getElementById('bar');
+window.addEventListener('scroll', function(){
+  var max = document.documentElement.scrollHeight - window.innerHeight;
+  bar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+}, {passive:true});
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+}, {rootMargin:'0px 0px -10% 0px', threshold:.05});
+document.querySelectorAll('.step').forEach(function(s){ io.observe(s); });
+if(/[?&]qa=1/.test(location.search) || matchMedia('(prefers-reduced-motion: reduce)').matches){
+  document.querySelectorAll('.step').forEach(function(s){ s.classList.add('in'); s.style.transition = 'none'; });
+}
+function counter(el){
+  var t = parseFloat(el.getAttribute('data-counter')), d = parseInt(el.getAttribute('data-decimals')||'0',10);
+  var commas = el.hasAttribute('data-commas'), t0 = null;
+  if(/[?&]qa=1/.test(location.search) || matchMedia('(prefers-reduced-motion: reduce)').matches){
+    el.textContent = commas ? Math.round(t).toLocaleString('en-US') : t.toFixed(d); return;
+  }
+  function step(ts){ if(!t0) t0 = ts; var p = Math.min((ts - t0)/1300, 1), e = 1 - Math.pow(1-p,3), v = t*e;
+    el.textContent = commas ? Math.round(v).toLocaleString('en-US') : v.toFixed(d);
+    if(p < 1) requestAnimationFrame(step); }
+  requestAnimationFrame(step);
+}
+var cio = new IntersectionObserver(function(es){
+  es.forEach(function(en){ if(en.isIntersecting){ counter(en.target); cio.unobserve(en.target); } });
+},{threshold:.5});
+document.querySelectorAll('[data-counter]').forEach(function(el){ cio.observe(el); });
+})();
+</script>
+</body>
+</html>

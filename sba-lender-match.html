@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SBA Lender Match — Canine Capital</title>
+<meta name="description" content="SBA Lender Match — the U.S. Small Business Administration's free, official tool for connecting with SBA-affiliated lenders. And if you're not yet SBA-ready, Canine Capital's maturation bridge has a path.">
+<link rel="canonical" href="https://www.caninecapitalfund.com/sba-lender-match.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230530AD'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='white' text-anchor='middle' font-weight='bold'%3ECC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Sora:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--blue-50:#F0F6FF;--blue-100:#E0EDFD;--blue-200:#C0D8FA;--blue-300:#90B5F4;--blue-800:#0530AD;--blue-900:#041A63;
+--blue-950:#020C2E;--sky-100:#E4F5FD;--sky-300:#A0D7F4;--sky-400:#73C2EC;--sky-600:#2997D8;--sky-700:#1E7DB5;
+--gray-50:#F6F7FA;--gray-100:#ECEDF4;--gray-200:#D8DAE6;--gray-400:#8E91A8;--gray-500:#636682;--gray-600:#474A62;--gray-900:#111218;
+--f-display:'Playfair Display',Georgia,serif;--f-body:'Sora',system-ui,sans-serif;--f-mono:'IBM Plex Mono',monospace;
+--r-md:8px;--r-lg:12px;--r-xl:18px;--r-pill:9999px;--sh-md:0 4px 16px rgba(5,48,173,.10),0 2px 6px rgba(5,48,173,.06);
+--sh-lg:0 12px 40px rgba(5,48,173,.13),0 4px 12px rgba(5,48,173,.07)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--f-body);font-size:15.5px;line-height:1.7;color:var(--gray-600);background:var(--gray-50);-webkit-font-smoothing:antialiased}
+a{color:var(--blue-800);text-decoration:none}
+:focus-visible{outline:3px solid var(--sky-400);outline-offset:2px;border-radius:2px}
+.nav{position:fixed;top:0;left:0;right:0;height:60px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--gray-100);z-index:90;display:flex;align-items:center}
+.nav-in{max-width:1100px;margin:0 auto;padding:0 28px;width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.nav-back{font-weight:700;letter-spacing:.06em;font-size:13px;color:var(--blue-800);text-transform:uppercase;white-space:nowrap}
+.nav-back span{color:var(--sky-600);margin-right:8px}
+.nav-tag{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;color:var(--gray-400);text-transform:uppercase}
+.nav-cta{display:inline-flex;align-items:center;font-weight:600;font-size:12.5px;padding:8px 16px;border-radius:var(--r-md);background:var(--blue-800);color:#fff;white-space:nowrap}
+.hero{background:linear-gradient(160deg,var(--blue-950),var(--blue-900));color:#fff;padding:128px 28px 64px;text-align:center}
+.kicker{font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--sky-400);margin-bottom:16px}
+h1{font-family:var(--f-display);font-weight:400;font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.12}
+h1 em{font-style:italic;color:var(--sky-400)}
+.hero p{color:var(--blue-200);font-size:15.5px;max-width:600px;margin:16px auto 0;text-wrap:balance}
+main{max-width:880px;margin:-26px auto 0;padding:0 24px 30px;position:relative;z-index:2}
+.frame{border:1px solid var(--gray-200);border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--sh-lg);background:#fff}
+.frame-bar{display:flex;align-items:center;gap:12px;background:var(--gray-50);border-bottom:1px solid var(--gray-100);padding:11px 16px}
+.frame-dots{display:flex;gap:5px}
+.frame-dots i{width:10px;height:10px;border-radius:50%;background:var(--gray-200)}
+.frame-url{flex:1;display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--gray-200);border-radius:var(--r-pill);padding:7px 16px;font-family:var(--f-mono);font-size:11.5px;color:var(--gray-500);overflow:hidden;white-space:nowrap}
+.frame-url .lock{color:#12A05A}
+.frame-body{padding:42px 38px;background:linear-gradient(180deg,#fff 25%,var(--blue-50))}
+.frame-head{display:flex;align-items:center;gap:16px;margin-bottom:8px}
+.frame-head img{width:46px;height:46px;border-radius:10px}
+.frame-head b{font-size:21px;color:var(--gray-900);font-weight:600}
+.frame-head span{display:block;font-size:12px;color:var(--gray-500)}
+.frame-body>p{font-size:14px;margin:14px 0 22px;max-width:560px}
+.frame-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:26px}
+.frame-step{background:#fff;border:1px solid var(--gray-200);border-radius:var(--r-lg);padding:18px;font-size:12.5px;color:var(--gray-600);line-height:1.6}
+.frame-step .n{font-family:var(--f-mono);font-size:11px;color:var(--sky-700);display:block;margin-bottom:8px}
+.frame-step b{display:block;font-size:14px;color:var(--blue-800);margin-bottom:6px}
+.frame-cta{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:14.5px;padding:14px 28px;border-radius:var(--r-lg);transition:transform .2s,box-shadow .2s;min-height:46px}
+.btn:hover{transform:translateY(-1px);box-shadow:var(--sh-md)}
+.btn-p{background:var(--blue-800);color:#fff}
+.btn-p:hover{background:#1040C0}
+.btn-s{border:1.5px solid var(--gray-200);color:var(--blue-800);background:#fff}
+.frame-note{font-size:10.5px;color:var(--gray-400);line-height:1.65;margin-top:18px}
+.bridge{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;background:var(--blue-950);border-radius:var(--r-xl);color:#fff;padding:26px 30px;margin:22px 0}
+.bridge img{width:40px;height:40px;border-radius:9px}
+.bridge b{display:block;font-size:15px;margin-bottom:4px}
+.bridge p{font-size:12.5px;color:var(--blue-200);line-height:1.6}
+.bridge .btn{white-space:nowrap}
+.btn-o{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-o:hover{border-color:#fff}
+.foot{max-width:880px;margin:0 auto;padding:10px 28px 44px;font-size:11px;line-height:1.7;color:var(--gray-400)}
+.foot a{color:var(--gray-500);text-decoration:underline}
+.foot .links{margin-bottom:10px;font-size:12px}
+.foot .links a{margin-right:16px;text-decoration:none;color:var(--blue-800);font-weight:600}
+@media(max-width:680px){.frame-steps{grid-template-columns:1fr}.frame-body{padding:28px 22px}
+.bridge{grid-template-columns:1fr;text-align:center}.bridge img{margin:0 auto}.frame-cta .btn{width:100%}.nav-tag{display:none}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="nav-in">
+<a class="nav-back" href="index.html"><span>&larr;</span>Canine&nbsp;Capital</a>
+<span class="nav-tag">SBA Lender Match</span>
+<a class="nav-cta" href="learn/sba-preferred-lender-program.html">The PLP Journey &rarr;</a></div></header>
+
+<section class="hero">
+  <p class="kicker">Official SBA Tool &middot; Free &middot; No Credit Pull</p>
+  <h1>SBA <em>Lender Match</em></h1>
+  <p>The U.S. Small Business Administration&rsquo;s own front door — answer a few questions, get matched with SBA-affiliated lenders in days, compare offers, choose.</p>
+</section>
+
+<main>
+  <div class="frame">
+    <div class="frame-bar"><span class="frame-dots"><i></i><i></i><i></i></span>
+    <span class="frame-url"><span class="lock">&#128274;</span>https://lending.sba.gov/lender-match/</span></div>
+    <div class="frame-body">
+      <div class="frame-head"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAk1BMVEUeL1P///8cLVEdLlIbLVFIVnPx8vMrLk+hJjDt7vC3JCpEUnBMLEcxQWJPXHj09fUjNFfc3+Ojqri7wMo7LUt6hJlfa4UrO13U2N7l5+pWY302LU04R2dGVHGAip65vsmpsL3FydJnc4uwJSyOlqiborKwtsPMz9eRmqt0fpSZJjNeKkJ4YHQtPV7KW2Dj4OSnS1YTM48aAAACGUlEQVRIie2TfW+bMBDGfWdDyjzAhgYMBRIoL0m3bPv+n25nSFqSQKRJm/ZPHylSsO/ne+58ZuxT/1QoHgjv45V0Hkiqu/Nl5j7Q4PMbQDguuN6KXNBLgJvIFW2XAU8KXFayBiz0YtxbArDY9cUaEMRRegtwCsbzIj/rY1fddpVzP0gSJx1TKH9Syi4ZaeWa4GprQgAvzrmtxuhRQ+RMSTDRJriyyysbTr+M1jGgP5O0M4V1AO0c4L4B3ZRBF0KvRmCoqqqtAbrLNtTzqpFuuUUUahcan1sgoknE0oPYWsfc5p97skBfMMTCKacMkb2u3IX9uH2w9iq8tgS6r4IT2uYSYLqu22vIcvrmpwFqMyV7J5rMHhKali50VvTeGsfAhe0BbuagPNSeDYlPYw1ZTKJDOjpWtOA5SQjbuScUmMomIqbBsQZFcsiTRJ7WMKS+ht2HJyzbSlKX8Ei1iREgK5z1EOYoHA8OyPYWvgA0jdRx6mQDcDwDNElSkxeBFYQJiqPdendUGHC7pmnJgzNa0lEUUZfIBlexnW16wdDPu+RNbQkrNu+SIVx6dBsCLTcf/7zXnpftGkVtlbvaNineVxQh8rhO0iRQxzp2ZoBQviwLNa2oScxeo/2g2TD+3Zvgm83Kg7PDdP9E2cvb28sfAc+vr38NEGvAt68r+g7DaQH4sqofP5O7eCr6aVW/FuIZ2zzQUvyn/qt+AyOWK/dvswCIAAAAAElFTkSuQmCC" alt="SBA"><div><b>Lender Match</b><span>U.S. Small Business Administration</span></div></div>
+      <p>Lender Match connects small-business owners — including boarding and kennel operators — with the SBA&rsquo;s network of participating lenders, from community banks to the Preferred Lenders with delegated approval authority.</p>
+      <div class="frame-steps">
+        <div class="frame-step"><span class="n">STEP 01</span><b>Describe</b>Answer a few questions about your business and what the capital is for. Free, and no credit pull.</div>
+        <div class="frame-step"><span class="n">STEP 02</span><b>Match</b>Within a few days, interested SBA-affiliated lenders contact you directly.</div>
+        <div class="frame-step"><span class="n">STEP 03</span><b>Compare</b>Review rates, terms, and fees side by side — then pick your lender and apply.</div>
+      </div>
+      <div class="frame-cta">
+        <a class="btn btn-p" href="https://lending.sba.gov/lender-match/" target="_blank" rel="noopener noreferrer">Launch Lender Match on sba.gov &#8599;</a>
+        <a class="btn btn-s" href="learn/sba-7a-504.html">Learn SBA 7(a) &amp; 504 first</a>
+      </div>
+      <p class="frame-note">Lender Match is an official tool of the U.S. Small Business Administration. Per SBA security policy it runs only on sba.gov, so it opens in a dedicated tab. Canine Capital is not affiliated with, or endorsed by, the SBA; SBA marks belong to the SBA.</p>
+    </div>
+  </div>
+
+  <div class="bridge">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230530AD'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='white' text-anchor='middle' font-weight='bold'%3ECC%3C/text%3E%3C/svg%3E" alt="Canine Capital">
+    <div>
+      <b>Not SBA-ready yet? That&rsquo;s our lane.</b>
+      <p>If a lender says &ldquo;not yet,&rdquo; Canine Capital&rsquo;s 24&ndash;30 month maturation bridge seasons boarding &amp; kennel operators toward SBA benchmarks — then refers you back, ready to close.</p>
+    </div>
+    <a class="btn btn-o" href="learn/sba-preferred-lender-program.html">See How the Bridge Works &rarr;</a>
+  </div>
+</main>
+
+<footer class="foot">
+  <p class="links"><a href="index.html">Home</a><a href="index.html#library">The Library</a><a href="disclosures.html">Disclosures</a></p>
+  <p>For general information only — not legal, financial, or investment advice, and not an offer or solicitation to buy or sell any security. All investments involve risk, including possible loss of principal. See <a href="disclosures.html">Important Regulatory and Disclosure Information</a>. &copy; 2026 Canine Capital. All rights reserved.</p>
+</footer>
+</body>
+</html>

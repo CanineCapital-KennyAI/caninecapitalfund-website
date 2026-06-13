@@ -1,0 +1,15 @@
+# Local tooling — not part of the deployed site
+cc-shot.py
+csp-test.py
+
+# Stale backups / scratch (git history is the backup now)
+index-v1-backup.html
+*.bak
+index.html.bak-*
+
+# Separate CloudPanel sites — deployed independently
+subdomains/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Credit Facility — The Library · Canine Capital</title>
+<meta name="description" content="What a credit facility is — from Mesopotamian standing credit to syndicated loans to today’s direct private-credit facilities — and how Canine Capital’s dual-asset facilities work.">
+<link rel="canonical" href="https://www.caninecapitalfund.com/learn/the-credit-facility.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230530AD'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='white' text-anchor='middle' font-weight='bold'%3ECC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Sora:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--cc-blue:#0530AD;--cc-sky:#2997D8;--blue-50:#F0F6FF;--blue-100:#E0EDFD;--blue-200:#C0D8FA;--blue-300:#90B5F4;
+--blue-800:#0530AD;--blue-900:#041A63;--blue-950:#020C2E;--sky-100:#E4F5FD;--sky-300:#A0D7F4;--sky-400:#73C2EC;
+--sky-600:#2997D8;--sky-700:#1E7DB5;--sky-800:#145C87;--gray-50:#F6F7FA;--gray-100:#ECEDF4;--gray-200:#D8DAE6;
+--gray-400:#8E91A8;--gray-500:#636682;--gray-600:#474A62;--gray-700:#2E3042;--gray-900:#111218;--gray-950:#0A0B0F;
+--f-display:'Playfair Display',Georgia,serif;--f-body:'Sora',system-ui,sans-serif;--f-mono:'IBM Plex Mono',monospace;
+--r-md:8px;--r-lg:12px;--r-xl:18px;--r-pill:9999px;
+--sh-md:0 4px 16px rgba(5,48,173,.10),0 2px 6px rgba(5,48,173,.06)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--f-body);font-size:16px;line-height:1.7;color:var(--gray-600);background:#fff;-webkit-font-smoothing:antialiased}
+a{color:var(--blue-800);text-decoration:none}
+:focus-visible{outline:3px solid var(--sky-400);outline-offset:2px;border-radius:2px}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--blue-800),var(--sky-600));z-index:100}
+.nav{position:fixed;top:0;left:0;right:0;height:60px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--gray-100);z-index:90;display:flex;align-items:center}
+.nav-in{max-width:1100px;margin:0 auto;padding:0 28px;width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.nav-back{font-weight:700;letter-spacing:.06em;font-size:13px;color:var(--blue-800);text-transform:uppercase;white-space:nowrap}
+.nav-back span{color:var(--sky-600);margin-right:8px}
+.nav-tag{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;color:var(--gray-400);text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-cta{display:inline-flex;align-items:center;font-weight:600;font-size:12.5px;padding:8px 16px;border-radius:var(--r-md);background:var(--blue-800);color:#fff;white-space:nowrap;transition:background .2s}
+.nav-cta:hover{background:#1040C0}
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--blue-950),var(--blue-900) 55%,var(--blue-800));color:#fff;padding:140px 28px 84px}
+.hero .orb{position:absolute;border-radius:50%;pointer-events:none;animation:drift 14s ease-in-out infinite alternate}
+.hero .o1{width:540px;height:540px;background:radial-gradient(circle,rgba(41,151,216,.22),transparent 65%);top:-200px;right:-120px}
+.hero .o2{width:420px;height:420px;background:radial-gradient(circle,rgba(115,194,236,.12),transparent 65%);bottom:-200px;left:-100px;animation-delay:-7s}
+@keyframes drift{from{transform:translate3d(0,0,0)}to{transform:translate3d(24px,18px,0)}}
+.hero-in{max-width:860px;margin:0 auto;position:relative;z-index:2}
+.kicker{font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--sky-400);display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.kicker::before{content:"";width:28px;height:1.5px;background:var(--sky-400)}
+h1{font-family:var(--f-display);font-weight:400;font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.12;margin-bottom:14px}
+h1 em{font-style:italic;color:var(--sky-400)}
+.persona{font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sky-300);margin-bottom:22px}
+.hero p.lead{font-size:17.5px;line-height:1.75;color:var(--blue-200);max-width:640px}
+main{max-width:860px;margin:0 auto;padding:24px 28px 0}
+.step{position:relative;padding:56px 0 56px 76px;border-left:1.5px solid var(--gray-100);margin-left:22px;opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.16,1,.3,1)}
+.step.in{opacity:1;transform:none}
+.step:last-of-type{border-left-color:transparent}
+.step-num{position:absolute;left:-23px;top:52px;width:44px;height:44px;border-radius:50%;background:#fff;border:1.5px solid var(--blue-200);color:var(--blue-800);font-family:var(--f-mono);font-size:13px;display:flex;align-items:center;justify-content:center}
+.step h2{font-family:var(--f-display);font-weight:400;font-size:clamp(1.45rem,2.6vw,1.9rem);color:var(--blue-800);line-height:1.2;margin-bottom:14px}
+.step h2 em{font-style:italic}
+.step p{margin-bottom:12px;font-size:15px}
+.step p:last-child{margin-bottom:0}
+.step ul{margin:10px 0 12px;padding-left:0;list-style:none}
+.step li{position:relative;padding:7px 0 7px 26px;font-size:14.5px}
+.step li::before{content:"—";position:absolute;left:0;color:var(--sky-600)}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.chip{display:inline-flex;align-items:center;background:var(--blue-50);border:1px solid var(--blue-200);color:var(--blue-800);border-radius:var(--r-pill);font-size:11.5px;font-weight:500;padding:4px 11px}
+.notice{background:#FEF9E7;border:1px solid #F3E2A8;border-radius:var(--r-lg);padding:18px 20px;font-size:12.5px;line-height:1.7;color:#7D5A00;margin-top:18px}
+.notice b{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.stats{background:var(--blue-950);border-radius:24px;padding:40px 36px;margin:26px 0 10px;color:#fff;position:relative;overflow:hidden}
+.stats::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(41,151,216,.16),transparent 65%);top:-180px;right:-120px}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;position:relative;z-index:2}
+.stat{padding:20px 24px;border-left:1px solid rgba(115,194,236,.16);border-top:1px solid rgba(115,194,236,.16)}
+.stat:nth-child(odd){border-left:0;padding-left:0}
+.stat:nth-child(-n+2){border-top:0;padding-top:0}
+.stat:nth-last-child(-n+2){padding-bottom:0}
+.stat .v{font-family:var(--f-mono);font-size:clamp(1.5rem,3vw,2.1rem);color:#fff;font-variant-numeric:tabular-nums;line-height:1.15}
+.stat .v em{font-style:normal;color:var(--sky-400)}
+.stat .l{font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--sky-400);margin-bottom:8px;display:block}
+.stat .n{font-size:11.5px;color:var(--blue-200);margin-top:6px;line-height:1.5}
+.cta{background:linear-gradient(160deg,var(--blue-900),var(--blue-800));border-radius:24px;color:#fff;text-align:center;padding:52px 32px;margin:48px 0 24px}
+.cta h3{font-family:var(--f-display);font-weight:400;font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:10px}
+.cta h3 em{font-style:italic;color:var(--sky-400)}
+.cta p{color:var(--blue-200);font-size:14.5px;max-width:520px;margin:0 auto 26px;text-wrap:balance}
+.cta .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-weight:600;font-size:14.5px;padding:13px 26px;border-radius:var(--r-lg);transition:transform .2s,box-shadow .2s;min-height:44px}
+.btn:hover{transform:translateY(-1px);box-shadow:var(--sh-md)}
+.btn-w{background:#fff;color:var(--blue-800)}
+.btn-o{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-o:hover{border-color:#fff}
+.foot{max-width:860px;margin:0 auto;padding:8px 28px 44px;font-size:11px;line-height:1.7;color:var(--gray-400)}
+.foot a{color:var(--gray-500);text-decoration:underline}
+.foot .links{margin-bottom:10px;font-size:12px}
+.foot .links a{margin-right:16px;text-decoration:none;color:var(--blue-800);font-weight:600}
+@media(max-width:480px){
+.stats-grid{grid-template-columns:1fr}
+.stat{border-left:0;padding-left:0;padding-right:0;border-top:1px solid rgba(115,194,236,.16)}
+.stat:first-child{border-top:0;padding-top:0}
+.stat:nth-child(2){border-top:1px solid rgba(115,194,236,.16);padding-top:20px}
+.stat:nth-last-child(-n+2){padding-bottom:20px}
+.stat:last-child{padding-bottom:0}
+}
+@media(max-width:640px){.nav-tag{display:none}.hero{padding:120px 22px 64px}main{padding:18px 22px 0}
+.step{padding:44px 0 44px 54px;margin-left:14px}.step-num{left:-19px;width:36px;height:36px;font-size:11.5px;top:42px}
+.stats{padding:30px 22px}.cta .row .btn{width:100%}}
+
+.nb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:18px 0 8px}
+.nb{background:#fff;border:1px solid var(--gray-200);border-radius:var(--r-lg);padding:16px 18px;display:flex;gap:12px;align-items:flex-start}
+.nb img{width:26px;height:26px;border-radius:6px;flex:0 0 26px;margin-top:2px}
+.nb b{display:block;font-size:14px;color:var(--gray-900)}
+.nb .arc{display:inline-block;font-family:var(--f-mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;border-radius:var(--r-pill);padding:2px 9px;margin:5px 0 6px}
+.nb .arc.was{background:#FEF9E7;color:#7D5A00}
+.nb .arc.is{background:var(--sky-100);color:var(--sky-800)}
+.nb span.d{font-size:12px;color:var(--gray-500);line-height:1.55;display:block}
+.tmnote{font-size:10.5px;color:var(--gray-400);line-height:1.6;margin-top:10px}
+.vs{margin:18px 0 6px}
+.vs-row{margin-bottom:18px}
+.vs-row .t{display:flex;justify-content:space-between;gap:10px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-400);margin-bottom:9px}
+.bar{display:grid;grid-template-columns:120px 1fr 64px;gap:10px;align-items:center;margin-bottom:7px}
+.bar .who{font-family:var(--f-mono);font-size:10px;color:var(--gray-500);text-transform:uppercase;letter-spacing:.06em}
+.bar .tr{height:10px;background:var(--gray-100);border-radius:var(--r-pill);overflow:hidden}
+.bar .tr i{display:block;height:100%;width:0;border-radius:var(--r-pill);transition:width 1.1s cubic-bezier(.16,1,.3,1) .25s}
+.bar.a .tr i{background:var(--gray-300)}
+.bar.b .tr i{background:linear-gradient(90deg,var(--blue-800),var(--sky-600))}
+.bar .val{font-family:var(--f-mono);font-size:12px;color:var(--gray-900);text-align:right;white-space:nowrap}
+.step.in .tr i{width:var(--w)}
+.ladder{margin:18px 0 6px;border-left:1.5px solid var(--gray-100)}
+.lad{position:relative;padding:11px 0 11px 26px}
+.lad::before{content:"";position:absolute;left:-5px;top:19px;width:8.5px;height:8.5px;border-radius:50%;background:var(--blue-200)}
+.lad.hot::before{background:var(--sky-600);box-shadow:0 0 12px rgba(41,151,216,.7)}
+.lad .y{font-family:var(--f-mono);font-size:11px;color:var(--sky-700);display:block;margin-bottom:2px}
+.lad b{font-size:14px;color:var(--gray-900)}
+.lad span.d{font-size:12.5px;color:var(--gray-500);display:block;line-height:1.55}
+.vignette{background:linear-gradient(160deg,var(--blue-950),var(--blue-900));border-radius:var(--r-xl);color:#fff;padding:30px 32px;margin:20px 0 8px;position:relative;overflow:hidden}
+.vignette::after{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(41,151,216,.18),transparent 65%);top:-160px;right:-110px}
+.vignette .vk{font-family:var(--f-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--sky-400);display:block;margin-bottom:12px;position:relative;z-index:2}
+.vignette p{position:relative;z-index:2;font-family:var(--f-display);font-size:clamp(1.1rem,2vw,1.35rem);line-height:1.6;color:#fff}
+.vignette p em{font-style:italic;color:var(--sky-400)}
+.vignette .src{position:relative;z-index:2;display:flex;align-items:center;gap:9px;margin-top:16px;font-size:11.5px;color:var(--blue-200);font-family:var(--f-body)}
+.vignette .src img{width:20px;height:20px;border-radius:5px}
+</style>
+</head>
+<body>
+<div class="progress" id="bar" aria-hidden="true"></div>
+<header class="nav"><div class="nav-in"><a class="nav-back" href="../index.html"><span>&larr;</span>Canine&nbsp;Capital</a><span class="nav-tag">The Library &middot; 16 / 18 &middot; Credit Facility</span><a class="nav-cta" href="../index.html#offerings">View the Roster &rarr;</a></div></header>
+<section class="hero"><div class="orb o1"></div><div class="orb o2"></div><div class="hero-in"><p class="kicker">The Library &middot; No. 16</p><h1>The Credit <em>Facility</em></h1><p class="persona">The Instrument Behind Institutional Lending</p><p class="lead">Not a loan &mdash; an architecture. Committed capital, standing rules, living covenants: the structure that has carried business credit from temple granaries to the largest deals on earth. Ours is built for the dog economy.</p></div></section>
+<main>
+<section class="step"><span class="step-num">01</span><h2>Not a Loan &mdash; <em>an Architecture</em></h2><p>A loan is an event: money moves once, on one date, at one size. A credit facility is an architecture: committed capital standing behind a business under negotiated rules &mdash; how much may be drawn, when, against what collateral, under which covenants, for how long.</p><p>It is the difference between being handed an umbrella and owning the weather contract. Most serious business credit &mdash; from corner-store working capital to the largest buyouts in history &mdash; runs on facilities.</p><ul><li><b>Revolver</b> &mdash; draw, repay, draw again, up to a limit</li><li><b>Term facility</b> &mdash; drawn once, amortized on schedule</li><li><b>Bridge facility</b> &mdash; carries a borrower between two states</li><li><b>Warehouse / asset-backed</b> &mdash; collateral-secured, formula-governed</li></ul></section>
+<section class="step"><span class="step-num">02</span><h2>Four Thousand Years of <em>Standby Capital</em></h2><p>The facility is older than the word. The idea &mdash; capital committed in advance, on terms, against the harvest &mdash; is as old as lending itself:</p><div class="ladder"><div class="lad"><span class="y">2000 BCE</span><b>Temple credit lines</b><span class="d">Mesopotamian temples extend standing seasonal credit against future grain — the first committed facilities. <a href="journey-of-lending.html">The whole walk is here</a>.</span></div><div class="lad"><span class="y">1400s</span><b>Merchant lines of credit</b><span class="d">Medici-era trade credit lets merchants draw against the bank&rsquo;s name across Europe — the revolver&rsquo;s ancestor.</span></div><div class="lad"><span class="y">1800s</span><b>Trade &amp; railroad finance</b><span class="d">Industrial-scale term lending matures: drawn capital, amortization schedules, hard collateral.</span></div><div class="lad"><span class="y">1970s</span><b>The syndicated loan</b><span class="d">Banks club together to share one borrower&rsquo;s facility — agent banks, credit agreements, the modern template.</span></div><div class="lad"><span class="y">1980s&ndash;90s</span><b>Leveraged lending &amp; covenants</b><span class="d">Facilities power the buyout era; covenant engineering becomes a discipline of its own.</span></div><div class="lad hot"><span class="y">Today</span><b>Private credit writes direct</b><span class="d">Non-bank lenders originate and hold facilities themselves — no syndicate required. The facility came home.</span></div></div></section>
+<section class="step"><span class="step-num">03</span><h2>The Names on the <em>Documents</em></h2><p>Two eras, one instrument. The syndicate era&rsquo;s agent banks still arrange the megadeals &mdash; and the direct era&rsquo;s private credit firms now write facilities straight onto their own books:</p><div class="nb-grid"><div class="nb"><img src="data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAEAAQAMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAADBQAEBgIHAf/EACsQAAICAQMDAgQHAAAAAAAAAAECAAMEBRESITFhBkETIjJRFCRxgZGi0f/EABgBAQEBAQEAAAAAAAAAAAAAAAABAwIF/8QAHBEBAQACAgMAAAAAAAAAAAAAAAECEQMSEyFB/9oADAMBAAIRAxEAPwBE6QDr1l5lgHSeY9ZRdesH2lt07wDJAHJIekkCSSSQHpHiDcD7jr5hyJo/SzEaRrh2BNWNzrJUHievUbxjN3SZ3rNsc6gb9RAsv3IG/mb1Vyn9GYF2EnLKOcU5hQSV2bofEY1WaNXrmZiiul8G9KabgoHBLn5Alf69pp42d5LHlTrsOsEe24I/mbfQdEGB6uGPqSC1MbJWlVYdLXb6T5+UFv2Evaxi14GDrWu8K3y/xzYuJzQFaFB2JA7b95Jx+lvJ7086/wA3kjO3V7sjTcnEzvzDOy2UWuo5VkH5hv8AYj2iycVpN/WjYR7oVqYmh6297cFvoFVW5+ttz0ERqeUhEY3V2ZY9po1yM/Bs9KU6Tzu+PVkG4sahwbff5e/mLcd8ZdMy6HssS60oU417qOJ36nfp3HtAkTgiXtd7TpJD+z1JXlavpObnB0XCVWt4Ju1rgdT7ewE5t9RafcNUwM1Mi3TM643o6IBZQ58E7H295n2ECyeJfJXF4sQ86nAqUjDvvyGY/W9Pwgo/Tc7mL2G0uukA6Tloa12Q6sGEXVvLNdkjpZInBE6VtxPpEAJE4IhiJwRBYrukA6y4RBMkI//Z" alt="" loading="lazy"><div><b>JPMorgan Chase</b><span class="arc was">Syndicate era &middot; agent bank</span><span class="d">The archetypal arranger — thousands of credit agreements bear its name.</span></div></div><div class="nb"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAYFBMVEX///8NDQ0AAADc3NwICAj5+flOTk6Ojo7Pz8/Ly8vY2NhmZmbv7+/y8vKdnZ3BwcFfX196enqHh4e6urqoqKgbGxtYWFhzc3MsLCzp6ek0NDSvr69FRUVtbW05OTmAgIAGvarwAAAB9ElEQVRYhe1V7aKCIAyFSeK3ZmZZVu//lnd8Kwa3B+D8ScZ2OINtEZKQkJAQRPN8UTColK2dBnA4RcPPwmW8TCtQSiGTRo6mdex4DmhkNEZQAjC4t+KzA0OQo+0pt6srxAkuwOyx5Abq84W/XDsswGIEmYyv9eqEByNBIZRUxqWHGMFD5t2bJaaeSQEUGuuTQ5jgIuI3zo0kuAuCwjqVEQIl4O0MMxK0Mq2bM16Dz1gpAYOz9PmCMtguL9LNIYJOEXz21tNVELANQxC5Ipg8s6woZBj/JZBaqS4ZX5i4nCUe3yhHuHj2VhHjzkHcHpUmOCT71BIwjbqNEBSaoDzsfAwDijjuWpSaQNbMec0VVnElo8kCRXS/EXA7EmRAD07E+ScCvJKHelV1YjNbEUENxZ4Ab3/nPlkRpt19VP4lzrI1zCQg2d0URP2dYPGfcQSvsl+GIZCDX0gc/OO4dqm+RCPesC9l7nc3ITUESmXD7y5Zr7fNq8o6RKDe0c0OTbArbSkhlAKRnQ+rWY4eobWFLhGfWhQrMw0z6EGw7WLRFqFnJGp+ugx17W1nnBibLFRIRPwviANytahs5dlaknM70k4YRMEENA/XP/VicmQQjcd3uokOfH/4zfWfGAPz2HXnK249img8YpkGCgGsPPSACQkJCeQPiHsQn6dYIK0AAAAASUVORK5CYII=" alt="" loading="lazy"><div><b>Goldman Sachs</b><span class="arc was">Syndicate era</span><span class="d">Arranger and lender across leveraged and investment-grade facilities.</span></div></div><div class="nb"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAP1BMVEVHcEwFba7XIikEbK0Fba0FbK0Fba4FbK0Fba4FbK0DbKwFba41XZUFa6zYIyrWIinYIyrYIyrVISkFba7YIyo6yt/AAAAAE3RSTlMA2XF1XE/opLOHKMsPP5k6xeQclndyLQAAAZJJREFUWIXtld2SgyAMhfkRgUbQlr7/sy4ERKHYEW92ZtdzU2pyPggRJOTWrf+iF2PWMjZPl9xseWc97dzpnuy70pP1+D/siDi9innzLNbarRR7zs/W9Dzjiz0T8Mx2puXnkqNnTut4pYfiEBX9S7aDLgtDwsAFN9/Wn6eXzukci3WEEedG86Y/TpOLH90eQJa0uGng8GgDWNDWrgqAYeuL0IaINqBSDcji/JT/GHBGD68AkGHwNVNoBaB4ShIUgIZZfQM2+f9mDVTa8gARQxjKBkCEX1Xbh32WG7oB2pXinYB1/hEgDXaAoH0XGoApujSeC0P9cOoDKPTnFmlnSBdgKv2+86QPUKS2n34HyGoB3QBI/bkMCFH6qwAa35zrAHwNPi7XDgBPb/9lwGM9JlcBuAm7bTRYTwEIGYDuqQUw8QSmL4SOsAKA2yQFp659nFU6xJLrOFQVIN838uBCAVcK6hMypsBwdKWpwq/qEtJGY7fbACLGzY8tFdRrd/lqoAoDpgpsWymxG3DuU3Pr1q2/qB9r6ja4o5Rc4QAAAABJRU5ErkJggg==" alt="" loading="lazy"><div><b>Citi</b><span class="arc was">Syndicate era</span><span class="d">Global facility infrastructure — trade finance to term loans.</span></div></div><div class="nb"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAt1BMVEX////jGDfjFTUBIWniACUAAF/hAB/iACPiACziACjjETMAHWfiCjD+9vgAH2j+8/X86ez0s7uwt8v63ODkID/sdoT2vcT1uL/vi5frb373ys/74uXwk57lKETpW23pVmn51dqhqcEACWEAFWSBjKy4v9Ho6/Hc4Onxm6bzqrThABjnQlnyo6zoTWHmM00KLHEzR3+VnrngAAAAAFbugY4bM3RVY5FxfaLEytkqP3tHV4lea5XrZnfib3djAAAClklEQVRYhe1Va3OaQBSFhX2CAgUURBAlUQkRtTVpTPP/f1eBZZc8TIp2pjOd8Xxycc8995y9s6soV1xxxf+B1P0bdp6QO+T5o8GlBQaTaYF0inEyPrfGJAwmVvPLvt/olOhmOOnPtgMPEYLVxLGbdTSNsUmQF9g9C1gjP9YJA6ZOEof3PprRMhhZZ3hIAw8TAExs+ilvqxdtvt3tV7KGT3SmAvp90yWYBmU5+oIOjezH9kl+GOQlQoUj2YeqK8ZwcbrEtwdoGPB42yyW4utYhG/dlzoBqqoyimLnI/1pBw1tsZ3z1d542C9f/+36rLJTwcRxcGI4V48w0zJ4s5RWDLj42Tl/wY04IDg5OQ43Fd2Az5z+dKx6qZaPIs10hsxaHFAaRJJj5Zu1MK8thsPFtjX/WNOHcCeidBNBV9fdaUxCqpt6XKe5eq4YBrxpzS8yTdOyrM1CsX18gj4uuCWGk0iZH2EGj1xvtYPDuvtfIsA1IzVdJeZUTmF1trjJs060zGvTz0IeNvLareiz1AHfF3ZzmMcdffYm0dURarV7IT8IUbMT4CKVm0ad+l2SvqYL+YWQH5O2e5bLPWmBWjpD7+jNIA41cZSK9YIB3xhK81bIA63DK06Nwz6De9Gp2sp73djnbaDViXgnRrnGUpz9Qbjv5N0Nb6kyT4M/3G9RofOdZic/1dvuAZpFX3BrOJSPDp518iUvWUf6+W3QYpCgZsj0tfw0FUfHsN/ndnYAUUmcSkcbIU/LnjezPbt7ke07pjy7Q//HoTPqozZ84p3xMEi4JRXhh5e8bzkVg0/GF9AVX8wOLfq+SW8Qxbx/gA+X0GULjH4y+X2QI0Y81z7nTXwHVy0GymF6eQGlFo8uivCKK674x/gNpg0xbRqejiQAAAAASUVORK5CYII=" alt="" loading="lazy"><div><b>Bank of America</b><span class="arc was">Syndicate era</span><span class="d">One of the largest middle-market facility books in banking.</span></div></div><div class="nb"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAJFBMVEVHcEwnemAnemAnemAnemAnemAnemAnemAnemAnemAnemAnemCxlGu3AAAAC3RSTlMA9t5KzJEVsVxyK+yIKlsAAAG8SURBVFiFpZftFoMgCIbzM8v7v9+lK6GJoIxfnTN400d4c9smRNydlMKX57z/UR9yCX19qvX5UAvYr4DV1p/5jlMpEB4BLcbcQlefQECH0YOACmPMKDQYA6o3GozmWvn+B0ZX2LkmkJYFystjWYYW41XkMYhVjMd32XAUYVHA3OCgGdbqz2cCtBgLQteWUsMvCZTm+T4BxrhQfwA1HUaLXqjBeOLOAYzz/h5eFtAE5jG+17uOMeWXDa5j9D/7bRjNXH38Jb6KMXSLbQJzxtQP7xpGlzv7AIwz/u6JvBWMkVpp+8YYGeNBttwCxjL/vXcARqm+nrnr4pjGCJ+SQUj+LtVL/n7IAjzGeisyVIACV19vRXS7Qjdy/r4zlOwMRu6c4MYzxpjYLTaBsTFZFrLcjRXheFravXOIMQiH1DCO/J3fH8ZIn7QTG1XAWGyHd5w2aWRalHaAMVKoA38GNRpG6rDFQdnwsA5+E7+/TaBveCMj2Dh/T+KkojQqle/R37zcDbUf7Wwo8HpZ9LRsH/hfyNPP0SErt4n9/jqLBHI432tCQfTTSSZeDfG/gDG2hr+iPlwWTgqYO9PjVPMBI1YqB1Wlj4IAAAAASUVORK5CYII=" alt="" loading="lazy"><div><b>Apollo</b><span class="arc is">Direct era &middot; private credit</span><span class="d">Originates and holds large-scale credit facilities directly.</span></div></div><div class="nb"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAflBMVEUACDT///8ABjIABzMABTIABDEABTHc3ePh4ueXmqx2epLt7vFaX3t7f5YNFD7T1NyipbW6vMgmLVKrrbwgJk34+PmOkaVeY3/y8/XFx9EsMlcUGkNITW0cIkpiZ4JPVXM/RWZrb4kIDjmEh503PWDOz9hBR2dMUXC9v8uoqroOixhnAAACCUlEQVQ4jXVT2YKjIBCkuUS8UMT7JGom//+Di5rozuwsLyJ9VHUVIPTbwgwjin8NHWGSh4WKcvrjnFDGOaOE5g8P3NIx+VZG46Yrh3CJwwRM4hdrNfG/qkkW1WLVypdFBV7ZItZ45Z2A20hUqust7TVUascnSA9XAs5SWDvLHHwKokRxqEKL1MjecdqnUGfuD7u412FEWOZHrV4+Y9gCvGaPtxq86Tilra90+56CbwFId0ysD2KjH1apvigq8PJdNmmC8RKHLPXZDNHcA23d9xmY+ZIGZ/KRnkqxzcCDO4IrFPZOkDJPzjFYCCAZsQq+2ssfnOsc6b2x41iC60BLI5ZbORJJzKQ4qLHRgCJ5AvL2hja6pyw83aBLAElfQHqb5wYO+V55kCDtCmIIgu0G4KHv0PkAp130AUqDb2+A7JU5cFJAeIxBlyQKRHNLFPu7XrRPzHbaZUcFQXcjyMgeSsA5xT60u2LOxZMkDv3dJTYJeL1hd6kAxBwzF+CdcnWETglUz09XH+oAwOjNMja9Gnd321nAxZvEtXmG7gCqVJbp2OaTrA1A2n+sz0XQ8CU1O5CpkkRU+0b1H2doEzi6NB7qI+VcyRxfzrkE1wFx3gz+KipjAk8PPb6d2bV+xDaTeqJttmxT01v+7dmR2Zj6qy4at8WcMfrPo7Sjr+YG/f85Iyc5+1n2Xn8A7r8iUYjRrQsAAAAASUVORK5CYII=" alt="" loading="lazy"><div><b>Ares</b><span class="arc is">Direct era</span><span class="d">One of the largest direct-lending facility platforms in the world.</span></div></div><div class="nb"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAYFBMVEUAAAD///9ra2umpqZ7e3v19fXv7+84ODj8/PyTk5P5+fm1tbXc3Nzj4+PJycmAgIC7u7soKCidnZ3U1NQhISEMDAzp6ekyMjJDQ0OHh4etra1XV1fBwcFSUlIUFBRkZGTGOFRCAAABpklEQVRYhe2WaW+DMAyGCTmAcJPSQkvH//+Xa3OsW0tiN5N2SH2/YcuPjGPHSZKX/pQ6ITjnwok71aqh7RkBeOunlNbEqaFGZVPJy6dUc4/Kg0kLWG+2cV2uFllmGEJqAekX66RTywcModoCOLNCALptwCixBLoNSAZjL6IBo7FL8DB8AFccMAUvoCS4KngBs3HwaEBri7D7dcAYCyiMowLi/QDbojQasDcOcCR9gMzYj1C8F2D6qAbjfYCztgroDL2AiV+NDRzuAehZrh8LiwCM/cS6nJB9eUKFfwByK907ND0go2+AsrCiS5UTXjXDkxmsn21M6UHupicAdwU7m5WjENvF10iNsbNoQKKMY44G9HKjOs8A3GYQ0YA+R/2EH+CqANxJAcDRuEg0wG4GEu6nAIBZQLipfwIQvlcRNQjGhwDDd49xMS7ghRAA2FfkWywgQyUADhP4Qjn6AKNeDQK8XhsfQJdwD8bvpAegtztiNdmRvQcwQTCrKSu4jSftIbOa1nm5pCUX4C4bVOWe+g8Siq7A6V/e+W3LNpSmpwmx01/613oH1n8QithMYa8AAAAASUVORK5CYII=" alt="" loading="lazy"><div><b>Blackstone</b><span class="arc is">Direct era</span><span class="d">Private credit at institutional scale — facilities without syndicates.</span></div></div></div><p class="tmnote">Logos shown for educational context only. All trademarks are the property of their respective owners; no affiliation with, or endorsement of, Canine Capital is implied.</p></section>
+<section class="step"><span class="step-num">04</span><h2>Anatomy of a <em>Facility</em></h2><p>Strip any facility — Mesopotamian or modern — and the same five organs appear:</p><ul><li><b>Commitment</b> &mdash; capital reserved for the borrower, drawn as needed</li><li><b>Covenants</b> &mdash; the living rules that keep the credit healthy between payments</li><li><b>Collateral</b> &mdash; what stands behind the promise if cash flow fails</li><li><b>Tenor</b> &mdash; the clock: term, amortization, maturity</li><li><b>Pricing</b> &mdash; the coupon or spread that pays capital for standing ready</li></ul><p>Covenants are the part outsiders underrate. A facility is monitored continuously, not judged once &mdash; which is precisely what makes it safer than its size suggests, and precisely the work agents are better at than anyone.</p></section>
+<section class="step"><span class="step-num">05</span><h2>At <em>Canine Capital</em></h2><p>Everything on our roster exists to fund one product: the dual-asset-backed commercial credit facility, written for boarding and kennel operators &mdash; including the 24&ndash;30 month <a href="sba-preferred-lender-program.html">maturation bridge facility</a> that takes a &ldquo;not yet&rdquo; borrower to SBA-ready.</p><p>Bond proceeds fund the facilities; the facilities&rsquo; income services your coupons; covenants are monitored by agents in real time against 2.5M+ cataloged outcomes; and every facility is secured twice &mdash; operating cash flow plus real estate and hard collateral.</p><div class="stats"><div class="stats-grid"><div class="stat"><span class="l">The Bridge</span><div class="v">24&ndash;30</div><div class="n">Months &mdash; borrower maturation facility</div></div><div class="stat"><span class="l">Security</span><div class="v">Dual-Asset</div><div class="n">Cash flow + real estate &amp; hard collateral</div></div><div class="stat"><span class="l">Roster Coupons</span><div class="v">7.5&ndash;14.0%</div><div class="n">Fixed, contractual, per the roster</div></div><div class="stat"><span class="l">Monitored Against</span><div class="v">2.5M+</div><div class="n">Cataloged lending outcomes</div></div></div></div></section>
+<div class="cta"><h3>The architecture, <em>at work.</em></h3><p>Every coupon on the roster is serviced by a facility built this way — see them live.</p><div class="row"><a class="btn btn-w" href="../index.html#offerings">View the Securities Roster &rarr;</a><a class="btn btn-o" href="../index.html#library">Continue in the Library</a></div></div>
+</main>
+<footer class="foot"><p class="links"><a href="../index.html">Home</a><a href="../index.html#library">The Library</a><a href="../disclosures.html">Disclosures</a></p><p>Educational overview for general information only &mdash; not legal, financial, or investment advice, and not an offer or solicitation to buy or sell any security. Offerings, if made, are conducted only through each series&rsquo; offering documents under applicable exemptions. All investments involve risk, including possible loss of principal. See <a href="../disclosures.html">Important Regulatory and Disclosure Information</a>. &copy; 2026 Canine Capital. All rights reserved.</p></footer>
+<script>
+(function(){
+"use strict";
+var bar = document.getElementById('bar');
+window.addEventListener('scroll', function(){
+  var max = document.documentElement.scrollHeight - window.innerHeight;
+  bar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+}, {passive:true});
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+}, {rootMargin:'0px 0px -10% 0px', threshold:.05});
+document.querySelectorAll('.step').forEach(function(s){ io.observe(s); });
+if(/[?&]qa=1/.test(location.search) || matchMedia('(prefers-reduced-motion: reduce)').matches){
+  document.querySelectorAll('.step').forEach(function(s){ s.classList.add('in'); s.style.transition = 'none'; });
+}
+function counter(el){
+  var t = parseFloat(el.getAttribute('data-counter')), d = parseInt(el.getAttribute('data-decimals')||'0',10);
+  var commas = el.hasAttribute('data-commas'), t0 = null;
+  if(/[?&]qa=1/.test(location.search) || matchMedia('(prefers-reduced-motion: reduce)').matches){
+    el.textContent = commas ? Math.round(t).toLocaleString('en-US') : t.toFixed(d); return;
+  }
+  function step(ts){ if(!t0) t0 = ts; var p = Math.min((ts - t0)/1300, 1), e = 1 - Math.pow(1-p,3), v = t*e;
+    el.textContent = commas ? Math.round(v).toLocaleString('en-US') : v.toFixed(d);
+    if(p < 1) requestAnimationFrame(step); }
+  requestAnimationFrame(step);
+}
+var cio = new IntersectionObserver(function(es){
+  es.forEach(function(en){ if(en.isIntersecting){ counter(en.target); cio.unobserve(en.target); } });
+},{threshold:.5});
+document.querySelectorAll('[data-counter]').forEach(function(el){ cio.observe(el); });
+})();
+</script>
+</body>
+</html>

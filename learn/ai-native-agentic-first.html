@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Native, Agentic-First — The Library · Canine Capital</title>
+<meta name="description" content="What AI-native and agentic-first actually mean, the companies built this way today — Anthropic, Cursor, Perplexity, Harvey, Sierra, Cognition — and why the model matters to bond investors.">
+<link rel="canonical" href="https://www.caninecapitalfund.com/learn/ai-native-agentic-first.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230530AD'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='white' text-anchor='middle' font-weight='bold'%3ECC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Sora:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--cc-blue:#0530AD;--cc-sky:#2997D8;--blue-50:#F0F6FF;--blue-100:#E0EDFD;--blue-200:#C0D8FA;--blue-300:#90B5F4;
+--blue-800:#0530AD;--blue-900:#041A63;--blue-950:#020C2E;--sky-100:#E4F5FD;--sky-300:#A0D7F4;--sky-400:#73C2EC;
+--sky-600:#2997D8;--sky-700:#1E7DB5;--sky-800:#145C87;--gray-50:#F6F7FA;--gray-100:#ECEDF4;--gray-200:#D8DAE6;
+--gray-400:#8E91A8;--gray-500:#636682;--gray-600:#474A62;--gray-700:#2E3042;--gray-900:#111218;--gray-950:#0A0B0F;
+--f-display:'Playfair Display',Georgia,serif;--f-body:'Sora',system-ui,sans-serif;--f-mono:'IBM Plex Mono',monospace;
+--r-md:8px;--r-lg:12px;--r-xl:18px;--r-pill:9999px;
+--sh-md:0 4px 16px rgba(5,48,173,.10),0 2px 6px rgba(5,48,173,.06)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--f-body);font-size:16px;line-height:1.7;color:var(--gray-600);background:#fff;-webkit-font-smoothing:antialiased}
+a{color:var(--blue-800);text-decoration:none}
+:focus-visible{outline:3px solid var(--sky-400);outline-offset:2px;border-radius:2px}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--blue-800),var(--sky-600));z-index:100}
+.nav{position:fixed;top:0;left:0;right:0;height:60px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--gray-100);z-index:90;display:flex;align-items:center}
+.nav-in{max-width:1100px;margin:0 auto;padding:0 28px;width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.nav-back{font-weight:700;letter-spacing:.06em;font-size:13px;color:var(--blue-800);text-transform:uppercase;white-space:nowrap}
+.nav-back span{color:var(--sky-600);margin-right:8px}
+.nav-tag{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;color:var(--gray-400);text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-cta{display:inline-flex;align-items:center;font-weight:600;font-size:12.5px;padding:8px 16px;border-radius:var(--r-md);background:var(--blue-800);color:#fff;white-space:nowrap;transition:background .2s}
+.nav-cta:hover{background:#1040C0}
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--blue-950),var(--blue-900) 55%,var(--blue-800));color:#fff;padding:140px 28px 84px}
+.hero .orb{position:absolute;border-radius:50%;pointer-events:none;animation:drift 14s ease-in-out infinite alternate}
+.hero .o1{width:540px;height:540px;background:radial-gradient(circle,rgba(41,151,216,.22),transparent 65%);top:-200px;right:-120px}
+.hero .o2{width:420px;height:420px;background:radial-gradient(circle,rgba(115,194,236,.12),transparent 65%);bottom:-200px;left:-100px;animation-delay:-7s}
+@keyframes drift{from{transform:translate3d(0,0,0)}to{transform:translate3d(24px,18px,0)}}
+.hero-in{max-width:860px;margin:0 auto;position:relative;z-index:2}
+.kicker{font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--sky-400);display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.kicker::before{content:"";width:28px;height:1.5px;background:var(--sky-400)}
+h1{font-family:var(--f-display);font-weight:400;font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.12;margin-bottom:14px}
+h1 em{font-style:italic;color:var(--sky-400)}
+.persona{font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sky-300);margin-bottom:22px}
+.hero p.lead{font-size:17.5px;line-height:1.75;color:var(--blue-200);max-width:640px}
+main{max-width:860px;margin:0 auto;padding:24px 28px 0}
+.step{position:relative;padding:56px 0 56px 76px;border-left:1.5px solid var(--gray-100);margin-left:22px;opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.16,1,.3,1)}
+.step.in{opacity:1;transform:none}
+.step:last-of-type{border-left-color:transparent}
+.step-num{position:absolute;left:-23px;top:52px;width:44px;height:44px;border-radius:50%;background:#fff;border:1.5px solid var(--blue-200);color:var(--blue-800);font-family:var(--f-mono);font-size:13px;display:flex;align-items:center;justify-content:center}
+.step h2{font-family:var(--f-display);font-weight:400;font-size:clamp(1.45rem,2.6vw,1.9rem);color:var(--blue-800);line-height:1.2;margin-bottom:14px}
+.step h2 em{font-style:italic}
+.step p{margin-bottom:12px;font-size:15px}
+.step p:last-child{margin-bottom:0}
+.step ul{margin:10px 0 12px;padding-left:0;list-style:none}
+.step li{position:relative;padding:7px 0 7px 26px;font-size:14.5px}
+.step li::before{content:"—";position:absolute;left:0;color:var(--sky-600)}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.chip{display:inline-flex;align-items:center;background:var(--blue-50);border:1px solid var(--blue-200);color:var(--blue-800);border-radius:var(--r-pill);font-size:11.5px;font-weight:500;padding:4px 11px}
+.notice{background:#FEF9E7;border:1px solid #F3E2A8;border-radius:var(--r-lg);padding:18px 20px;font-size:12.5px;line-height:1.7;color:#7D5A00;margin-top:18px}
+.notice b{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.stats{background:var(--blue-950);border-radius:24px;padding:40px 36px;margin:26px 0 10px;color:#fff;position:relative;overflow:hidden}
+.stats::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(41,151,216,.16),transparent 65%);top:-180px;right:-120px}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;position:relative;z-index:2}
+.stat{padding:20px 24px;border-left:1px solid rgba(115,194,236,.16);border-top:1px solid rgba(115,194,236,.16)}
+.stat:nth-child(odd){border-left:0;padding-left:0}
+.stat:nth-child(-n+2){border-top:0;padding-top:0}
+.stat:nth-last-child(-n+2){padding-bottom:0}
+.stat .v{font-family:var(--f-mono);font-size:clamp(1.5rem,3vw,2.1rem);color:#fff;font-variant-numeric:tabular-nums;line-height:1.15}
+.stat .v em{font-style:normal;color:var(--sky-400)}
+.stat .l{font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--sky-400);margin-bottom:8px;display:block}
+.stat .n{font-size:11.5px;color:var(--blue-200);margin-top:6px;line-height:1.5}
+.cta{background:linear-gradient(160deg,var(--blue-900),var(--blue-800));border-radius:24px;color:#fff;text-align:center;padding:52px 32px;margin:48px 0 24px}
+.cta h3{font-family:var(--f-display);font-weight:400;font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:10px}
+.cta h3 em{font-style:italic;color:var(--sky-400)}
+.cta p{color:var(--blue-200);font-size:14.5px;max-width:520px;margin:0 auto 26px;text-wrap:balance}
+.cta .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-weight:600;font-size:14.5px;padding:13px 26px;border-radius:var(--r-lg);transition:transform .2s,box-shadow .2s;min-height:44px}
+.btn:hover{transform:translateY(-1px);box-shadow:var(--sh-md)}
+.btn-w{background:#fff;color:var(--blue-800)}
+.btn-o{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-o:hover{border-color:#fff}
+.foot{max-width:860px;margin:0 auto;padding:8px 28px 44px;font-size:11px;line-height:1.7;color:var(--gray-400)}
+.foot a{color:var(--gray-500);text-decoration:underline}
+.foot .links{margin-bottom:10px;font-size:12px}
+.foot .links a{margin-right:16px;text-decoration:none;color:var(--blue-800);font-weight:600}
+@media(max-width:480px){
+.stats-grid{grid-template-columns:1fr}
+.stat{border-left:0;padding-left:0;padding-right:0;border-top:1px solid rgba(115,194,236,.16)}
+.stat:first-child{border-top:0;padding-top:0}
+.stat:nth-child(2){border-top:1px solid rgba(115,194,236,.16);padding-top:20px}
+.stat:nth-last-child(-n+2){padding-bottom:20px}
+.stat:last-child{padding-bottom:0}
+}
+@media(max-width:640px){.nav-tag{display:none}.hero{padding:120px 22px 64px}main{padding:18px 22px 0}
+.step{padding:44px 0 44px 54px;margin-left:14px}.step-num{left:-19px;width:36px;height:36px;font-size:11.5px;top:42px}
+.stats{padding:30px 22px}.cta .row .btn{width:100%}}
+
+.nb-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:18px 0 8px}
+.nb{background:#fff;border:1px solid var(--gray-200);border-radius:var(--r-lg);padding:16px 18px;display:flex;gap:12px;align-items:flex-start}
+.nb img{width:26px;height:26px;border-radius:6px;flex:0 0 26px;margin-top:2px}
+.nb b{display:block;font-size:14px;color:var(--gray-900)}
+.nb .arc{display:inline-block;font-family:var(--f-mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;border-radius:var(--r-pill);padding:2px 9px;margin:5px 0 6px}
+.nb .arc.was{background:#FEF9E7;color:#7D5A00}
+.nb .arc.is{background:var(--sky-100);color:var(--sky-800)}
+.nb span.d{font-size:12px;color:var(--gray-500);line-height:1.55;display:block}
+.tmnote{font-size:10.5px;color:var(--gray-400);line-height:1.6;margin-top:10px}
+.vs{margin:18px 0 6px}
+.vs-row{margin-bottom:18px}
+.vs-row .t{display:flex;justify-content:space-between;gap:10px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gray-400);margin-bottom:9px}
+.bar{display:grid;grid-template-columns:120px 1fr 64px;gap:10px;align-items:center;margin-bottom:7px}
+.bar .who{font-family:var(--f-mono);font-size:10px;color:var(--gray-500);text-transform:uppercase;letter-spacing:.06em}
+.bar .tr{height:10px;background:var(--gray-100);border-radius:var(--r-pill);overflow:hidden}
+.bar .tr i{display:block;height:100%;width:0;border-radius:var(--r-pill);transition:width 1.1s cubic-bezier(.16,1,.3,1) .25s}
+.bar.a .tr i{background:var(--gray-300)}
+.bar.b .tr i{background:linear-gradient(90deg,var(--blue-800),var(--sky-600))}
+.bar .val{font-family:var(--f-mono);font-size:12px;color:var(--gray-900);text-align:right;white-space:nowrap}
+.step.in .tr i{width:var(--w)}
+.ladder{margin:18px 0 6px;border-left:1.5px solid var(--gray-100)}
+.lad{position:relative;padding:11px 0 11px 26px}
+.lad::before{content:"";position:absolute;left:-5px;top:19px;width:8.5px;height:8.5px;border-radius:50%;background:var(--blue-200)}
+.lad.hot::before{background:var(--sky-600);box-shadow:0 0 12px rgba(41,151,216,.7)}
+.lad .y{font-family:var(--f-mono);font-size:11px;color:var(--sky-700);display:block;margin-bottom:2px}
+.lad b{font-size:14px;color:var(--gray-900)}
+.lad span.d{font-size:12.5px;color:var(--gray-500);display:block;line-height:1.55}
+.vignette{background:linear-gradient(160deg,var(--blue-950),var(--blue-900));border-radius:var(--r-xl);color:#fff;padding:30px 32px;margin:20px 0 8px;position:relative;overflow:hidden}
+.vignette::after{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(41,151,216,.18),transparent 65%);top:-160px;right:-110px}
+.vignette .vk{font-family:var(--f-mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--sky-400);display:block;margin-bottom:12px;position:relative;z-index:2}
+.vignette p{position:relative;z-index:2;font-family:var(--f-display);font-size:clamp(1.1rem,2vw,1.35rem);line-height:1.6;color:#fff}
+.vignette p em{font-style:italic;color:var(--sky-400)}
+.vignette .src{position:relative;z-index:2;display:flex;align-items:center;gap:9px;margin-top:16px;font-size:11.5px;color:var(--blue-200);font-family:var(--f-body)}
+.vignette .src img{width:20px;height:20px;border-radius:5px}
+</style>
+</head>
+<body>
+<div class="progress" id="bar" aria-hidden="true"></div>
+<header class="nav"><div class="nav-in"><a class="nav-back" href="../index.html"><span>&larr;</span>Canine&nbsp;Capital</a><span class="nav-tag">The Library &middot; 17 / 18 &middot; AI-Native</span><a class="nav-cta" href="../index.html#offerings">View the Roster &rarr;</a></div></header>
+<section class="hero"><div class="orb o1"></div><div class="orb o2"></div><div class="hero-in"><p class="kicker">The Library &middot; No. 17</p><h1>AI-Native, <em>Agentic-First</em></h1><p class="persona">What the Words on Our Masthead Actually Mean</p><p class="lead">Every company says &ldquo;AI&rdquo; now. Very few are built from it &mdash; model at the foundation, agents running the machinery, humans promoted to pure judgment. Here is the difference, the companies that prove it, and why ours matters to your coupons.</p></div></section>
+<main>
+<section class="step"><span class="step-num">01</span><h2>Native vs <em>Bolted-On</em></h2><p>&ldquo;AI-enabled&rdquo; means a company found a place to staple a chatbot. The org chart, the workflows, the cost structure &mdash; unchanged. AI-native means the opposite: the model is the foundation, and the institution is designed around what it makes possible, from day one.</p><p>Agentic-first is the operating consequence: autonomous agents execute complete workflows end to end &mdash; and humans hold the part machines should never hold: <a href="human-in-the-loop.html">the judgment</a>.</p><div class="chips"><span class="chip">Model as foundation, not feature</span><span class="chip">Agents run workflows</span><span class="chip">Humans own judgment</span></div></section>
+<section class="step"><span class="step-num">02</span><h2>What Agents Actually <em>Do</em></h2><p>Not demos &mdash; the machinery of a lender, absorbed:</p><ul><li>Intake &amp; verification &mdash; documents read, checked, filed on arrival</li><li>Credit analysis &mdash; every file scored against 2.5M+ cataloged outcomes</li><li>Covenant monitoring &mdash; continuous, not quarterly</li><li>Reconciliation &amp; reporting &mdash; assembled, not hand-built</li><li>Escalation &mdash; agents brief humans for every consequential approval</li></ul><p>Agents work around the clock, never tire, and never have a sloppy Friday. The people, freed of the machinery, spend their hours where investor money actually lives &mdash; decisions.</p></section>
+<section class="step"><span class="step-num">03</span><h2>The Natives, <em>Today</em></h2><p>A new generation of companies was born this way &mdash; one per industry, each rebuilding its field around the model:</p><div class="nb-grid"><div class="nb"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAG1BMVEXZdlbabEjacU/aZ0H+9/X67ejil4Hruavy0som81XtAAAD70lEQVRYhe1W2ZIbIQzUwQD//8XR0RKMvZWqVN5SYe0xYNRqtWSxRP/HPzvkL83nmjeE/CEer/GMzb2ce/4WQT4+aT4+Dh2D+71HcdsDIwlQFHTbYsnn6QhL2rMI5V+MJylInFSbjinH+Is6AavXvANgcUI7ADzwnDgpbfa14SeTAiep4VMgj7EVjA+CrRxfDj9eT/G2lwOof6/bpmPlwTBqj60NcwTOSUFDUs+puRVdA+Ke4NNt8+G1V5KZAxRiOkyOsk89RcCAkJGEivyRe7DcmV2osMYwI2BCGbgUgbjYEIRu7tiPh2GUpZ9zQHtNRA3hqP98ZAUlYRM8KMRETZXR6NSBl/yFplkAY8PjMCx9PHWeAN9YWsI1/9bD1woOz1SjHhQ0zFwIm1g9FPMmfjPoGnLX7AzM1jWcATaeo9mVChG5ZpTZMgOaDvA4AI2YugCgXihtJg1HFkbGO4NCwORYepy9AXoVE46Ia+yePWnPzKrKN/FbiphoOv8YM0yZ5trPnnSJ9z30RQJU7Pcwd8jjvwh9aeCfHEPA7ZvE3r6T5ezF9smA51rT+oX9pNRj9Nr5Gk+oa71mHrYOYH55AhoMt8H9gDCevSalhlwAOdH11Bg/SejGaYsw82GVkWv2fmdRrLVtgMtLghmhxeCTRDAotIgdjy8RPDKLzYJbU5ODm1I/Cick4Z9q4UFPMKQ+CAYsHUkWI30q6PVz0midkTuEsM9nArFymq8bxfRTWvsBhkZRc7EP2+Ru75U/fnmXo/UIFyfKcYG1IAuIws2jBp/uIvMDIQiqKNyFfmFWLFQ2upq67bJWsFzN7T1tKZcjBGuv+zcQ2mfv1OhIj6NMvxkGAYErTQzNqCHdf5bjNiLRRr0/GVh0VI1/OzQPyvmgCoDbv7mPe8hMvZimUtyJ6nfFRhkerxcDoxO3uqudN6L1ZKPB0ScNaD6JwDcNugOyHJHGZ6TaZmbo1DL1Vl5RQm3QWbi2YsQN41DO2qWPi3FZFawXB4Twac5+LOtmJZEw9GBCJn4N+rSW1NIzFkzCoSIIm9F82Qvx54jbCWa7GYcqYavv4y8AKQEq36AiiGbqRRVYHYLWnh2F/YkFbL7pAkD5PO0o1QxesYqG+B624YdVTmR6IwWAkwK3eEqeVsRMZ8V6shF7UU9ysauTKkdK6k14iJ4KfJ2LaukPwcGD5AwUW3p0BOP8BjYdQ3tKm2BQ6OlKy+IDNtp9ByK4IghIuAtaqiIGK22sWtUWgUudOPeKd776IrHO9/XBYHB0w0KOa+1ItF3VuhggAG5w1ZJaLyB9vzEhPfMGLrlBUy/fxwlkI7jk17365qL3Ny8SNn4BI7siq1gJmlgAAAAASUVORK5CYII=" alt="" loading="lazy"><div><b>Anthropic</b><span class="arc is">The lab</span><span class="d">Frontier models — including Fable 5, the author of our codebase.</span></div></div><div class="nb"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAS1BMVEVHcExCQTsUEgvt7OxCQTtBQDpBQDpAPzlBQDpBQDoQDgUBAADx8PD39vbZ2NcmJR++vb03NjDp6OjQz82pp6aOjYtiYF56eXdHcEzH0xfqAAAAGXRSTlMAf///4SyH/r1G//////////////////8AvnwSGwAAAkBJREFUWIWll9GigiAMhkvoQAxE0er93/QMrETdRGO3uS+2MfbvcsnsftVaSrVjUmp9vV9Iu2vVe980jdkx/Nn7Xukt4yZ7P31QNPzM9/K29P9T/pDzF+LVX+6v++aUfzxGr3P/k+4JMRP+fvGPhHcUN8X7G4AduJoyKdn8GfDj2ABL9zLVnw0AYLRoD+AQpo/3QXvO/RWsQHPhySF8zCOdAQNqcOJtbujpVBjFRQBN56yYzY3kIWIMVyKFAA+bu6NZQabCX4kUADyDE2uztn1u48Ak6L3gl2dwnd8g9EWu/350lvJPjG0q5BKAwQvWPSHCa4mQeRUNPFvy9Lm5VmVxYB1ngPEdf/o8jm5+eBYA6Fx7xAJmggYMtoMDplzHAvY6Zz6o5QF4XfjO+STa7QFimge194hAKwoA6rpk/i9XBMR7z6XCQPy5CIjXheic+M1ojwHidSEeEdO7gydgUoElPA6IDbzqHCyhOAOYOicHtOIkANs3A8DDnQaIDJBKWANIJawATCWsAGQX9SfAu4QVgCCqAJ8S/gowTd4nPwCmJvgdgA+pOADoeMCwmvUkIA4WGhDfscyfGyzkaIsAk5VwNdoaVRquEfBtAnK4FsY7Aoz/3mFqvBcEBgK+yaUFRkHiBPg0AflQo8QpiCwEpHeMFlkGRVZB5oVUQm5YJam6LzRDfMd2hSYrdU2SumG0JalbENuuKLar5T4uHNwXhYXDvBeO6pWnfulKhLNrX5P71y+e9atv/fI9MYrrv9qs///mKknzam32nQAAAABJRU5ErkJggg==" alt="" loading="lazy"><div><b>Cursor</b><span class="arc is">Engineering</span><span class="d">The AI-native code editor that rebuilt how software is written.</span></div></div><div class="nb"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAASFBMVEUAAAAAAAD9/fqXl5UAAAAAAAD///8HBwcAAAAAAADy8vCnp6X4+PXU1NKLi4pBQUDDw8Hk5OGenpwmJiWRkZB2dnRbW1qxsa/SbbTeAAAACnRSTlME////0jT//vOEODX2gQAAAoJJREFUWIWll9u2qyAMRYV2R6t4v/3/n54EBAPWgoc8dDQIUwjJQoqiKD7vqhSPrazen4Lsr3o+2Fr1h4CM8UjA+eeMF+JTvPMA77wV0Br+I/7cyiJoWHrfVWrx+veeixYCGli5+wJ4cX+FJgrwRrwubhwgYbgDDPgwASBhnL8B5pGepcxAgtqugE3pRwkx2PFN0IWADhvHPSUGOJbWuvuAXcemSwSIBQBaDmixYRHpANHXAHVvAdZ7AKAtA8wpDVglHFv7BECdYcK1LBPwtnSAmbiU+DvaAnkG0JmHxjJz+QVQoI1GWFPSmGtwT9UXQM07uu4BwLbX3wFtYKMZP4btd4BzXsZmAuAyxj54oO4Avrxh9Ry74IuMKNMAlAcL/nSLq4xHAKoem4nAJSIRgNUjN1sLG+5DvT0BoPiY6jmqEZNSntIUB1D4zJxtOZOcuYyMAmjNrfl7KlJLgeiTAFyYmSaSTJn9jAA87eaq3FhR/gmYmaIGANJVCVMEQK9heecfLKuZQgTw62gzepAB6CIA/J0ur+TnOQIwBrfVKIdhGCUHUEbyKsAwjtjpVlCMZJ0AymBpctoB5K0iWU08AXSckrmjVh+Qt5rYk80siJTR+o3SCQrGYJ91xy8AY2cQSUda5DVUBYsDxM4FBzAVoXfhTO4HgOOEN3mw2/JKB9C0acePRJqOAk8FnBVlM7EzspgG6HplBJEBtCyqPg0wKHDJc9YCndVqSAFILuKsmPS64l9pE6VO61yvGtuU78Qp90t18lcZ6EGTEoOOu+HXehcH+AdxCBBrDBBcYC4AMfuuCK88vluW8/z7TlRGLl3lZU6BVfnXvuyLZ/bVN//ynXn9/wfurDA/lO1fuwAAAABJRU5ErkJggg==" alt="" loading="lazy"><div><b>Perplexity</b><span class="arc is">Search</span><span class="d">Answers built by models, not link lists.</span></div></div><div class="nb"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAElBMVEUPDg36+vkAAAD///+hoaCwr6/SOEj5AAAAeUlEQVRYhe2WSwrAIAxENdH7X7mb0jYlIZUpKDhvOcS38MNYCiFkReRNGAbru1q6BGFoaFpvtEkYfjFco26YGx6jbpgZzKgbhoZzVtKQgi0EhnFBtU+wjgs8dhOgmwgf4wo3kYJ5ArRY0GpDyxWt9x8+GOAXhxAykQNhTAZx045usgAAAABJRU5ErkJggg==" alt="" loading="lazy"><div><b>Harvey</b><span class="arc is">Legal</span><span class="d">AI-native counsel workflows for the world&rsquo;s biggest firms.</span></div></div><div class="nb"><img src="data:image/png;base64,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" alt="" loading="lazy"><div><b>Sierra</b><span class="arc is">Customer ops</span><span class="d">Agents that carry entire service conversations.</span></div></div><div class="nb"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAYFBMVEUAAAD///9HR0fx8fEXFxdwcHCioqJSUlIaGhqZmZl8fHyrq6uxsbHg4OCenp4SEhIkJCRpaWnV1dU/Pz9kZGS9vb329vYfHx8nJyd/f3+UlJRKSko1NTXMzMxdXV11dXVMH32tAAAA6klEQVQokX2T2RKDIAxFE9GqBUVBq7VY//8vG5SZRlzyhJzM5WYREPGRFxBFkT8IAFZJTLZIKoL2nAFYhPqKASEuqqdJc2FI/x8fgShYMkMAJRnE8kQ/HQFkgE26Z5lAWXuGbz2hyHZsvX+2lfmA8kdOn/6i3879mhdDBaOUg3vFsCEtYzfx2VBes3OUdKEUEv/G3b6BKcnObtlkZ5LllQZDTsrRHgzdlrL6fLVdZeyxCXoRqNbWYlaUKBY+OarUBUFqvBvgGMeRMdO5H3bOES94qGuumIA60Q+hAC/Wll6hvTUXTPulvvkdftGfCM41zYweAAAAAElFTkSuQmCC" alt="" loading="lazy"><div><b>Cognition</b><span class="arc is">Agentic software</span><span class="d">Devin — the autonomous software engineer.</span></div></div><div class="nb"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230530AD'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='white' text-anchor='middle' font-weight='bold'%3ECC%3C/text%3E%3C/svg%3E" alt="" loading="lazy"><div><b>Canine Capital</b><span class="arc is">Lending</span><span class="d">The AI-native, agentic-first NBFI — this one is ours.</span></div></div></div><p class="tmnote">Logos shown for educational context only. All trademarks are the property of their respective owners; no affiliation with, or endorsement of, Canine Capital is implied.</p></section>
+<section class="step"><span class="step-num">04</span><h2>The First AI-Native <em>NBFI</em></h2><p>Canine Capital was not retrofitted; it was authored. The codebase is written and continuously evolved by <a href="fable-5.html">Claude Fable 5</a>. The agents run intake, analysis, monitoring, and reporting. The corpus &mdash; every SBA 7(a) and 504 loan since 1991 &mdash; sits under every decision. And every consequential judgment passes through a person.</p><p>In-house, the whole agentic stack answers to a name we mostly keep to ourselves: <em>the Mothership</em>. You&rsquo;ve now met it.</p><div class="stats"><div class="stats-grid"><div class="stat"><span class="l">Author of Record</span><div class="v">Fable 5</div><div class="n">The entire platform codebase</div></div><div class="stat"><span class="l">Corpus</span><div class="v">2.5M+</div><div class="n">Lending outcomes under every decision</div></div><div class="stat"><span class="l">Files Cataloged</span><div class="v">8,500+</div><div class="n">Boarding &amp; kennel businesses</div></div><div class="stat"><span class="l">Judgment</span><div class="v">Human</div><div class="n">Every consequential decision</div></div></div></div></section>
+<section class="step"><span class="step-num">05</span><h2>Why It Matters to <em>You</em></h2><p>For investors, AI-native is not a vibe &mdash; it is a cost structure and a quality curve. Machinery that costs near-zero means more of every dollar working as capital. Analysis that reads the full record the same way every time means consistency you can underwrite. And humans spending their hours purely on judgment means the thing that protects your coupon &mdash; the decision &mdash; gets the attention it deserves.</p><p>Better decisions lead to better, more reliable results. That is the whole sentence.</p></section>
+<div class="cta"><h3>Meet the <em>machinery.</em></h3><p>See what an AI-native balance sheet produces — fixed contractual coupons, on the roster.</p><div class="row"><a class="btn btn-w" href="../index.html#offerings">View the Securities Roster &rarr;</a><a class="btn btn-o" href="../index.html#library">Continue in the Library</a></div></div>
+</main>
+<footer class="foot"><p class="links"><a href="../index.html">Home</a><a href="../index.html#library">The Library</a><a href="../disclosures.html">Disclosures</a></p><p>Educational overview for general information only &mdash; not legal, financial, or investment advice, and not an offer or solicitation to buy or sell any security. Offerings, if made, are conducted only through each series&rsquo; offering documents under applicable exemptions. All investments involve risk, including possible loss of principal. See <a href="../disclosures.html">Important Regulatory and Disclosure Information</a>. &copy; 2026 Canine Capital. All rights reserved.</p></footer>
+<script>
+(function(){
+"use strict";
+var bar = document.getElementById('bar');
+window.addEventListener('scroll', function(){
+  var max = document.documentElement.scrollHeight - window.innerHeight;
+  bar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+}, {passive:true});
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+}, {rootMargin:'0px 0px -10% 0px', threshold:.05});
+document.querySelectorAll('.step').forEach(function(s){ io.observe(s); });
+if(/[?&]qa=1/.test(location.search) || matchMedia('(prefers-reduced-motion: reduce)').matches){
+  document.querySelectorAll('.step').forEach(function(s){ s.classList.add('in'); s.style.transition = 'none'; });
+}
+function counter(el){
+  var t = parseFloat(el.getAttribute('data-counter')), d = parseInt(el.getAttribute('data-decimals')||'0',10);
+  var commas = el.hasAttribute('data-commas'), t0 = null;
+  if(/[?&]qa=1/.test(location.search) || matchMedia('(prefers-reduced-motion: reduce)').matches){
+    el.textContent = commas ? Math.round(t).toLocaleString('en-US') : t.toFixed(d); return;
+  }
+  function step(ts){ if(!t0) t0 = ts; var p = Math.min((ts - t0)/1300, 1), e = 1 - Math.pow(1-p,3), v = t*e;
+    el.textContent = commas ? Math.round(v).toLocaleString('en-US') : v.toFixed(d);
+    if(p < 1) requestAnimationFrame(step); }
+  requestAnimationFrame(step);
+}
+var cio = new IntersectionObserver(function(es){
+  es.forEach(function(en){ if(en.isIntersecting){ counter(en.target); cio.unobserve(en.target); } });
+},{threshold:.5});
+document.querySelectorAll('[data-counter]').forEach(function(el){ cio.observe(el); });
+})();
+</script>
+</body>
+</html>

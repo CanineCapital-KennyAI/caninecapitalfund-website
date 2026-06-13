@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Boarding Kennel Business — The Library · Canine Capital</title>
+<meta name="description" content="Statistical analysis of U.S. dog ownership and the boarding-kennel industry — why pet care behaves like a utility, and where the market is headed.">
+<link rel="canonical" href="https://www.caninecapitalfund.com/learn/boarding-kennel-economy.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230530AD'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='white' text-anchor='middle' font-weight='bold'%3ECC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Sora:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--cc-blue:#0530AD;--cc-sky:#2997D8;--blue-50:#F0F6FF;--blue-100:#E0EDFD;--blue-200:#C0D8FA;--blue-300:#90B5F4;
+--blue-800:#0530AD;--blue-900:#041A63;--blue-950:#020C2E;--sky-100:#E4F5FD;--sky-300:#A0D7F4;--sky-400:#73C2EC;
+--sky-600:#2997D8;--sky-700:#1E7DB5;--sky-800:#145C87;--gray-50:#F6F7FA;--gray-100:#ECEDF4;--gray-200:#D8DAE6;
+--gray-400:#8E91A8;--gray-500:#636682;--gray-600:#474A62;--gray-700:#2E3042;--gray-900:#111218;--gray-950:#0A0B0F;
+--f-display:'Playfair Display',Georgia,serif;--f-body:'Sora',system-ui,sans-serif;--f-mono:'IBM Plex Mono',monospace;
+--r-md:8px;--r-lg:12px;--r-xl:18px;--r-pill:9999px;
+--sh-md:0 4px 16px rgba(5,48,173,.10),0 2px 6px rgba(5,48,173,.06)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--f-body);font-size:16px;line-height:1.7;color:var(--gray-600);background:#fff;-webkit-font-smoothing:antialiased}
+a{color:var(--blue-800);text-decoration:none}
+:focus-visible{outline:3px solid var(--sky-400);outline-offset:2px;border-radius:2px}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--blue-800),var(--sky-600));z-index:100}
+.nav{position:fixed;top:0;left:0;right:0;height:60px;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--gray-100);z-index:90;display:flex;align-items:center}
+.nav-in{max-width:1100px;margin:0 auto;padding:0 28px;width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.nav-back{font-weight:700;letter-spacing:.06em;font-size:13px;color:var(--blue-800);text-transform:uppercase;white-space:nowrap}
+.nav-back span{color:var(--sky-600);margin-right:8px}
+.nav-tag{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;color:var(--gray-400);text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-cta{display:inline-flex;align-items:center;font-weight:600;font-size:12.5px;padding:8px 16px;border-radius:var(--r-md);background:var(--blue-800);color:#fff;white-space:nowrap;transition:background .2s}
+.nav-cta:hover{background:#1040C0}
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,var(--blue-950),var(--blue-900) 55%,var(--blue-800));color:#fff;padding:140px 28px 84px}
+.hero .orb{position:absolute;border-radius:50%;pointer-events:none;animation:drift 14s ease-in-out infinite alternate}
+.hero .o1{width:540px;height:540px;background:radial-gradient(circle,rgba(41,151,216,.22),transparent 65%);top:-200px;right:-120px}
+.hero .o2{width:420px;height:420px;background:radial-gradient(circle,rgba(115,194,236,.12),transparent 65%);bottom:-200px;left:-100px;animation-delay:-7s}
+@keyframes drift{from{transform:translate3d(0,0,0)}to{transform:translate3d(24px,18px,0)}}
+.hero-in{max-width:860px;margin:0 auto;position:relative;z-index:2}
+.kicker{font-family:var(--f-mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--sky-400);display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.kicker::before{content:"";width:28px;height:1.5px;background:var(--sky-400)}
+h1{font-family:var(--f-display);font-weight:400;font-size:clamp(2.1rem,5vw,3.4rem);line-height:1.12;margin-bottom:14px}
+h1 em{font-style:italic;color:var(--sky-400)}
+.persona{font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sky-300);margin-bottom:22px}
+.hero p.lead{font-size:17.5px;line-height:1.75;color:var(--blue-200);max-width:640px}
+main{max-width:860px;margin:0 auto;padding:24px 28px 0}
+.step{position:relative;padding:56px 0 56px 76px;border-left:1.5px solid var(--gray-100);margin-left:22px;opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.16,1,.3,1)}
+.step.in{opacity:1;transform:none}
+.step:last-of-type{border-left-color:transparent}
+.step-num{position:absolute;left:-23px;top:52px;width:44px;height:44px;border-radius:50%;background:#fff;border:1.5px solid var(--blue-200);color:var(--blue-800);font-family:var(--f-mono);font-size:13px;display:flex;align-items:center;justify-content:center}
+.step h2{font-family:var(--f-display);font-weight:400;font-size:clamp(1.45rem,2.6vw,1.9rem);color:var(--blue-800);line-height:1.2;margin-bottom:14px}
+.step h2 em{font-style:italic}
+.step p{margin-bottom:12px;font-size:15px}
+.step p:last-child{margin-bottom:0}
+.step ul{margin:10px 0 12px;padding-left:0;list-style:none}
+.step li{position:relative;padding:7px 0 7px 26px;font-size:14.5px}
+.step li::before{content:"—";position:absolute;left:0;color:var(--sky-600)}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+.chip{display:inline-flex;align-items:center;background:var(--blue-50);border:1px solid var(--blue-200);color:var(--blue-800);border-radius:var(--r-pill);font-size:11.5px;font-weight:500;padding:4px 11px}
+.notice{background:#FEF9E7;border:1px solid #F3E2A8;border-radius:var(--r-lg);padding:18px 20px;font-size:12.5px;line-height:1.7;color:#7D5A00;margin-top:18px}
+.notice b{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
+.stats{background:var(--blue-950);border-radius:24px;padding:40px 36px;margin:26px 0 10px;color:#fff;position:relative;overflow:hidden}
+.stats::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(41,151,216,.16),transparent 65%);top:-180px;right:-120px}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;position:relative;z-index:2}
+.stat{padding:20px 24px;border-left:1px solid rgba(115,194,236,.16);border-top:1px solid rgba(115,194,236,.16)}
+.stat:nth-child(odd){border-left:0;padding-left:0}
+.stat:nth-child(-n+2){border-top:0;padding-top:0}
+.stat:nth-last-child(-n+2){padding-bottom:0}
+.stat .v{font-family:var(--f-mono);font-size:clamp(1.5rem,3vw,2.1rem);color:#fff;font-variant-numeric:tabular-nums;line-height:1.15}
+.stat .v em{font-style:normal;color:var(--sky-400)}
+.stat .l{font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--sky-400);margin-bottom:8px;display:block}
+.stat .n{font-size:11.5px;color:var(--blue-200);margin-top:6px;line-height:1.5}
+.cta{background:linear-gradient(160deg,var(--blue-900),var(--blue-800));border-radius:24px;color:#fff;text-align:center;padding:52px 32px;margin:48px 0 24px}
+.cta h3{font-family:var(--f-display);font-weight:400;font-size:clamp(1.5rem,3vw,2.1rem);margin-bottom:10px}
+.cta h3 em{font-style:italic;color:var(--sky-400)}
+.cta p{color:var(--blue-200);font-size:14.5px;max-width:520px;margin:0 auto 26px;text-wrap:balance}
+.cta .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-weight:600;font-size:14.5px;padding:13px 26px;border-radius:var(--r-lg);transition:transform .2s,box-shadow .2s;min-height:44px}
+.btn:hover{transform:translateY(-1px);box-shadow:var(--sh-md)}
+.btn-w{background:#fff;color:var(--blue-800)}
+.btn-o{border:1.5px solid rgba(255,255,255,.5);color:#fff}
+.btn-o:hover{border-color:#fff}
+.foot{max-width:860px;margin:0 auto;padding:8px 28px 44px;font-size:11px;line-height:1.7;color:var(--gray-400)}
+.foot a{color:var(--gray-500);text-decoration:underline}
+.foot .links{margin-bottom:10px;font-size:12px}
+.foot .links a{margin-right:16px;text-decoration:none;color:var(--blue-800);font-weight:600}
+@media(max-width:480px){
+.stats-grid{grid-template-columns:1fr}
+.stat{border-left:0;padding-left:0;padding-right:0;border-top:1px solid rgba(115,194,236,.16)}
+.stat:first-child{border-top:0;padding-top:0}
+.stat:nth-child(2){border-top:1px solid rgba(115,194,236,.16);padding-top:20px}
+.stat:nth-last-child(-n+2){padding-bottom:20px}
+.stat:last-child{padding-bottom:0}
+}
+@media(max-width:640px){.nav-tag{display:none}.hero{padding:120px 22px 64px}main{padding:18px 22px 0}
+.step{padding:44px 0 44px 54px;margin-left:14px}.step-num{left:-19px;width:36px;height:36px;font-size:11.5px;top:42px}
+.stats{padding:30px 22px}.cta .row .btn{width:100%}}
+</style>
+</head>
+<body>
+<div class="progress" id="bar" aria-hidden="true"></div>
+<header class="nav"><div class="nav-in"><a class="nav-back" href="../index.html"><span>&larr;</span>Canine&nbsp;Capital</a><span class="nav-tag">The Library &middot; 6 / 18 &middot; The Kennel Economy</span><a class="nav-cta" href="../index.html#offerings">View the Roster &rarr;</a></div></header>
+<section class="hero"><div class="orb o1"></div><div class="orb o2"></div><div class="hero-in"><p class="kicker">The Library &middot; No. 06</p><h1>A Utility, <em>Not a Luxury</em></h1><p class="persona">The Boarding &amp; Kennel Economy, by the Numbers</p><p class="lead">Roughly 71 million American households own a dog &mdash; and they buy care the way they buy electricity: reliably, repeatedly, in good markets and bad. This is the demand curve under every bond on the roster.</p></div></section>
+<main>
+<section class="step"><span class="step-num">01</span><h2>The Demand Is <em>Structural</em></h2><p>Dog ownership in the U.S. has compounded for three decades, and the households behind it treat care as essential: boarding when work travels, daycare when both adults work, grooming and medical as a baseline of modern pet parenting. Industry surveys consistently show pet-care spending holding through downturns that cut discretionary categories.</p><p>Boarding and daycare revenue is recurring by nature — the dog comes back every week — which is precisely the cash-flow shape credit underwriting wants to see.</p><div class="stats"><div class="stats-grid"><div class="stat"><span class="l">Dog-Owning Households</span><div class="v">~<span data-counter="71">0</span>M</div><div class="n">United States — essential, recurring demand</div></div><div class="stat"><span class="l">Businesses Analyzed</span><div class="v"><span data-counter="8500" data-commas>0</span>+</div><div class="n">Boarding &amp; kennel operators, investment-evaluation depth</div></div><div class="stat"><span class="l">Market Vision</span><div class="v"><span data-counter="36">0</span>-Mo</div><div class="n">Projected local market forecast per business</div></div><div class="stat"><span class="l">Capital Rails Built</span><div class="v">1<em>st</em></div><div class="n">Canine Capital is building it</div></div></div></div></section>
+<section class="step"><span class="step-num">02</span><h2>An Industry Hiding in <em>Plain Sight</em></h2><p>The supply side is thousands of independent, owner-operated facilities — profitable, asset-backed, and chronically under-banked. No institutional lender ever built underwriting around kennel economics; valuation, succession, and growth capital have run on local relationships and luck.</p><p>Canine Capital&rsquo;s platform has analyzed and cataloged 8,500+ of these businesses at investment-evaluation depth — dual-asset value and reasoning on every file, with a 36-month projected local market forecast attached to each.</p><div class="chips"><span class="chip">Fragmented ownership</span><span class="chip">Real-estate backed</span><span class="chip">Succession wave ahead</span><span class="chip">8,500+ files cataloged</span></div></section>
+<section class="step"><span class="step-num">03</span><h2>Where the Market Is <em>Headed</em></h2><p>Three currents are converging: demographic — younger owners spend more per dog every year; structural — a retirement wave among founding operators is putting decades-old facilities in motion; and technological — operations platforms now stream the booking, occupancy, and revenue telemetry that institutional credit requires.</p><p>Consolidation and professionalization follow capital. The operators who grow through this cycle will be the ones with an institutional partner built for their industry — that is the gap Canine Capital exists to fill.</p><div class="chips"><span class="chip">Professionalization</span><span class="chip">Operator consolidation</span><span class="chip">Telemetry-driven underwriting</span><span class="chip">Gingr · operations data</span></div></section>
+<section class="step"><span class="step-num">04</span><h2>From Kennels to <em>Coupons</em></h2><p>The chain is short and auditable: households pay for essential care → operators earn recurring revenue → facilities support dual-asset-backed credit → credit services fixed contractual coupons to bondholders. Demand like a utility, collateral like real estate, instruments like bonds.</p></section>
+<div class="cta"><h3>Durable demand, <em>institutional rails.</em></h3><p>See how this demand curve becomes fixed income on the securities roster.</p><div class="row"><a class="btn btn-w" href="../index.html#offerings">View the Securities Roster &rarr;</a><a class="btn btn-o" href="../index.html#contact">Speak with Canine Capital</a></div></div>
+</main>
+<footer class="foot"><p class="links"><a href="../index.html">Home</a><a href="../index.html#library">The Library</a><a href="../disclosures.html">Disclosures</a></p><p>Educational overview for general information only &mdash; not legal, tax, immigration, or investment advice, and not an offer or solicitation to buy or sell any security. Offerings, if made, are conducted only through each series&rsquo; offering documents under applicable exemptions. All investments involve risk, including possible loss of principal. See <a href="../disclosures.html">Important Regulatory and Disclosure Information</a>. &copy; 2026 Canine Capital. All rights reserved.</p></footer>
+<script>
+(function(){
+"use strict";
+var bar = document.getElementById('bar');
+window.addEventListener('scroll', function(){
+  var max = document.documentElement.scrollHeight - window.innerHeight;
+  bar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+}, {passive:true});
+var io = new IntersectionObserver(function(es){
+  es.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+}, {rootMargin:'0px 0px -10% 0px', threshold:.05});
+document.querySelectorAll('.step').forEach(function(s){ io.observe(s); });
+if(/[?&]qa=1/.test(location.search) || matchMedia('(prefers-reduced-motion: reduce)').matches){
+  document.querySelectorAll('.step').forEach(function(s){ s.classList.add('in'); s.style.transition = 'none'; });
+}
+function counter(el){
+  var t = parseFloat(el.getAttribute('data-counter')), d = parseInt(el.getAttribute('data-decimals')||'0',10);
+  var commas = el.hasAttribute('data-commas'), t0 = null;
+  if(/[?&]qa=1/.test(location.search) || matchMedia('(prefers-reduced-motion: reduce)').matches){
+    el.textContent = commas ? Math.round(t).toLocaleString('en-US') : t.toFixed(d); return;
+  }
+  function step(ts){ if(!t0) t0 = ts; var p = Math.min((ts - t0)/1300, 1), e = 1 - Math.pow(1-p,3), v = t*e;
+    el.textContent = commas ? Math.round(v).toLocaleString('en-US') : v.toFixed(d);
+    if(p < 1) requestAnimationFrame(step); }
+  requestAnimationFrame(step);
+}
+var cio = new IntersectionObserver(function(es){
+  es.forEach(function(en){ if(en.isIntersecting){ counter(en.target); cio.unobserve(en.target); } });
+},{threshold:.5});
+document.querySelectorAll('[data-counter]').forEach(function(el){ cio.observe(el); });
+})();
+</script>
+</body>
+</html>
