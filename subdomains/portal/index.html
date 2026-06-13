@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Borrower Portal — Coming Soon · Canine Capital</title>
+<meta name="description" content="The Canine Capital Borrower Portal is opening soon — applications, draws, telemetry, and your maturation-bridge milestones, one gateway.">
+<meta name="robots" content="noindex,follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230530AD'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='white' text-anchor='middle' font-weight='bold'%3ECC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Sora:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--blue-200:#C0D8FA;--blue-800:#0530AD;--blue-950:#020C2E;--sky-300:#A0D7F4;--sky-400:#73C2EC;--sky-600:#2997D8;
+--f-display:'Playfair Display',Georgia,serif;--f-body:'Sora',system-ui,sans-serif;--f-mono:'IBM Plex Mono',monospace}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:var(--f-body);background:linear-gradient(180deg,#010818 0%,var(--blue-950) 45%,#04205c 130%);color:#fff;overflow:hidden;-webkit-font-smoothing:antialiased}
+canvas{position:fixed;inset:0;width:100%;height:100%}
+.vig{position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 42%,rgba(1,6,20,.7) 100%)}
+.ui{position:fixed;inset:0;display:flex;flex-direction:column;z-index:3}
+.top{display:flex;align-items:center;justify-content:space-between;padding:26px 34px}
+.mark{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.mark .dash{width:30px;height:3px;border-radius:2px;background:linear-gradient(90deg,#2997D8,#73C2EC);flex:0 0 auto}
+.mark b{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.status{font-family:var(--f-mono);font-size:10px;letter-spacing:.16em;color:var(--sky-400);text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.status i{width:6px;height:6px;border-radius:50%;background:var(--sky-400);animation:pul 2s infinite}
+@keyframes pul{0%,100%{opacity:1}50%{opacity:.3}}
+.mid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;padding:0 24px 7vh;pointer-events:none}
+.mid>*{pointer-events:auto}
+.kick{font-family:var(--f-mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--sky-400);margin-bottom:18px}
+h1{font-family:var(--f-display);font-weight:400;font-size:clamp(2.2rem,6vw,4rem);line-height:1.08;text-wrap:balance;max-width:16ch}
+h1 em{font-style:italic;color:var(--sky-400)}
+.sub{margin-top:16px;font-size:14.5px;font-weight:300;line-height:1.75;color:var(--blue-200);max-width:480px;text-wrap:balance}
+.row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:14px;padding:13px 26px;border-radius:12px;text-decoration:none;transition:transform .2s,box-shadow .2s;min-height:46px}
+.btn:hover{transform:translateY(-1px);box-shadow:0 8px 28px rgba(41,151,216,.35)}
+.btn-w{background:#fff;color:var(--blue-800)}
+.btn-o{border:1.5px solid rgba(255,255,255,.45);color:#fff}
+.btn-o:hover{border-color:#fff}
+.bot{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px 34px;flex-wrap:wrap}
+.ship{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.2em;color:rgba(115,194,236,.5);text-transform:uppercase}
+.contact{font-size:11.5px;color:rgba(192,216,250,.6)}
+.contact a{color:rgba(192,216,250,.85);text-decoration:none}
+.contact a:hover{color:#fff}
+@media(max-width:640px){.top,.bot{padding:18px 20px}.bot{justify-content:center;text-align:center}.row .btn{width:100%}.mid .row{width:100%;max-width:380px}.mid{padding-bottom:5vh}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<canvas id="c" aria-hidden="true"></canvas>
+<div class="vig" aria-hidden="true"></div>
+<div class="ui">
+  <div class="top">
+    <a class="mark" href="https://www.caninecapitalfund.com"><span class="dash"></span><b>Canine&nbsp;Capital</b></a>
+    <span class="status"><i></i>Clearance Pending</span>
+  </div>
+  <div class="mid">
+    <p class="kick" data-e>Borrower Portal &middot; Coming Soon</p>
+    <h1 data-e>Your Business, <em>Cleared for Lift.</em></h1>
+    <p class="sub" data-e>Applications, draws, telemetry, and your maturation-bridge milestones &mdash; one gateway, opening soon for boarding &amp; kennel operators.</p>
+    <div class="row" data-e>
+      <a class="btn btn-w" href="mailto:support@caninecapitalfund.com?subject=Notify%20Me%20%E2%80%94%20Borrower%20Portal%20Launch">Notify Me at Launch</a>
+      <a class="btn btn-o" href="https://www.caninecapitalfund.com/sba-lender-match.html">Start Today &mdash; Lender Match &rarr;</a>
+    </div>
+  </div>
+  <div class="bot">
+    <span class="ship" data-e>Mothership hailing frequency open &middot; borrower gateway &middot; clearance pending</span>
+    <span class="contact" data-e>Boston, MA &middot; <a href="tel:+18774367945">(877) 436-7945</a> &middot; <a href="mailto:support@caninecapitalfund.com">support@caninecapitalfund.com</a></span>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+(function(){
+"use strict";
+var QA = /[?&]qa=1/.test(location.search);
+var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (typeof gsap !== 'undefined' && !RM && !QA){
+  gsap.from('[data-e]', {y: 26, opacity: 0, duration: 1, stagger: .12, ease: 'power3.out', delay: .3});
+}
+if (typeof THREE === 'undefined') return;
+var canvas = document.getElementById('c'), renderer;
+try{ renderer = new THREE.WebGLRenderer({canvas: canvas, alpha: true, antialias: true, preserveDrawingBuffer: true}); }
+catch(e){ return; }
+var isMobile = window.innerWidth < 700;
+var scene = new THREE.Scene();
+scene.fog = new THREE.Fog(0x020C2E, 9, 26);
+var camera = new THREE.PerspectiveCamera(50, 1, .1, 100);
+camera.position.set(0, 1.5, 8.4);
+
+function glowTex(){
+  var c = document.createElement('canvas'); c.width = c.height = 64;
+  var x = c.getContext('2d'), g = x.createRadialGradient(32,32,0,32,32,32);
+  g.addColorStop(0,'rgba(255,255,255,1)'); g.addColorStop(.35,'rgba(160,215,244,.7)'); g.addColorStop(1,'rgba(0,0,0,0)');
+  x.fillStyle = g; x.fillRect(0,0,64,64);
+  return new THREE.CanvasTexture(c);
+}
+var TEX = glowTex();
+
+/* ── THE MOTHERSHIP ── */
+var ship = new THREE.Group();
+ship.position.y = 2.5;
+scene.add(ship);
+var hull = new THREE.Mesh(new THREE.TorusGeometry(2.3, .32, 14, 72), new THREE.MeshBasicMaterial({color:0x081E4F}));
+hull.rotation.x = Math.PI/2;
+ship.add(hull);
+var hullWire = new THREE.Mesh(new THREE.TorusGeometry(2.3, .325, 10, 56), new THREE.MeshBasicMaterial({color:0x2997D8, wireframe:true, transparent:true, opacity:.22, blending:THREE.AdditiveBlending, depthWrite:false}));
+hullWire.rotation.x = Math.PI/2;
+ship.add(hullWire);
+var ring = new THREE.Mesh(new THREE.TorusGeometry(1.62, .05, 8, 64), new THREE.MeshBasicMaterial({color:0x73C2EC, transparent:true, opacity:.85, blending:THREE.AdditiveBlending, depthWrite:false}));
+ring.rotation.x = Math.PI/2;
+ship.add(ring);
+var dome = new THREE.Mesh(new THREE.SphereGeometry(.95, 24, 14, 0, Math.PI*2, 0, Math.PI/2), new THREE.MeshBasicMaterial({color:0x0A2A6E}));
+dome.scale.y = .62;
+ship.add(dome);
+var domeWire = new THREE.Mesh(new THREE.SphereGeometry(.96, 18, 10, 0, Math.PI*2, 0, Math.PI/2), new THREE.MeshBasicMaterial({color:0x2997D8, wireframe:true, transparent:true, opacity:.25, blending:THREE.AdditiveBlending, depthWrite:false}));
+domeWire.scale.y = .62;
+ship.add(domeWire);
+/* rim lights */
+var LIGHTS = 48, rim = [];
+for (var i = 0; i < LIGHTS; i++){
+  var a = i/LIGHTS*Math.PI*2;
+  var sp = new THREE.Sprite(new THREE.SpriteMaterial({map:TEX, color:0x73C2EC, transparent:true, opacity:.7, blending:THREE.AdditiveBlending, depthWrite:false}));
+  sp.scale.setScalar(.16);
+  sp.position.set(Math.cos(a)*2.62, 0, Math.sin(a)*2.62);
+  ship.add(sp); rim.push(sp);
+}
+/* hub port glow */
+var port = new THREE.Sprite(new THREE.SpriteMaterial({map:TEX, color:0xBFE7FF, transparent:true, opacity:.9, blending:THREE.AdditiveBlending, depthWrite:false}));
+port.scale.setScalar(1.1);
+port.position.y = -.3;
+ship.add(port);
+
+/* tractor beam */
+var beamGeo = new THREE.CylinderGeometry(.3, 1.5, 3.6, 32, 1, true);
+var beam = new THREE.Mesh(beamGeo, new THREE.MeshBasicMaterial({color:0x2997D8, transparent:true, opacity:.09, blending:THREE.AdditiveBlending, depthWrite:false, side:THREE.DoubleSide}));
+beam.position.y = .55;
+scene.add(beam);
+/* rising particles: businesses ascending */
+var BP = isMobile ? 220 : 420;
+var bpos = new Float32Array(BP*3), bseed = new Float32Array(BP*2);
+for (i = 0; i < BP; i++){ bseed[i*2] = Math.random()*Math.PI*2; bseed[i*2+1] = Math.random(); }
+var bGeo = new THREE.BufferGeometry();
+bGeo.setAttribute('position', new THREE.BufferAttribute(bpos, 3));
+var bPts = new THREE.Points(bGeo, new THREE.PointsMaterial({color:0xA0D7F4, size:.09, map:TEX, transparent:true, opacity:.9, sizeAttenuation:true, blending:THREE.AdditiveBlending, depthWrite:false}));
+scene.add(bPts);
+
+/* landing pad ripple rings */
+var rings = [];
+for (i = 0; i < 4; i++){
+  var rg = new THREE.Mesh(new THREE.RingGeometry(.9 + i*.5, 1.02 + i*.5, 64),
+    new THREE.MeshBasicMaterial({color:0x2997D8, transparent:true, opacity:.3, blending:THREE.AdditiveBlending, depthWrite:false, side:THREE.DoubleSide}));
+  rg.rotation.x = -Math.PI/2; rg.position.y = -1.25;
+  scene.add(rings[i] = rg);
+}
+/* ground dust field */
+var GN = isMobile ? 300 : 700, gpos = new Float32Array(GN*3);
+for (i = 0; i < GN; i++){ gpos[i*3]=(Math.random()-.5)*30; gpos[i*3+1]=-1.3+Math.random()*.1; gpos[i*3+2]=(Math.random()-.5)*22; }
+var gGeo = new THREE.BufferGeometry();
+gGeo.setAttribute('position', new THREE.BufferAttribute(gpos, 3));
+scene.add(new THREE.Points(gGeo, new THREE.PointsMaterial({color:0x2255D0, size:.05, map:TEX, transparent:true, opacity:.45, blending:THREE.AdditiveBlending, depthWrite:false})));
+/* stars */
+var SN = isMobile ? 350 : 750, spos = new Float32Array(SN*3);
+for (i = 0; i < SN; i++){ spos[i*3]=(Math.random()-.5)*44; spos[i*3+1]=Math.random()*18-2; spos[i*3+2]=-8-Math.random()*14; }
+var sGeo = new THREE.BufferGeometry();
+sGeo.setAttribute('position', new THREE.BufferAttribute(spos, 3));
+scene.add(new THREE.Points(sGeo, new THREE.PointsMaterial({color:0x90B5F4, size:.05, map:TEX, transparent:true, opacity:.55, blending:THREE.AdditiveBlending, depthWrite:false})));
+
+var mx = 0, my = 0, tmx = 0, tmy = 0;
+window.addEventListener('pointermove', function(e){
+  tmx = e.clientX/window.innerWidth - .5; tmy = e.clientY/window.innerHeight - .5;
+}, {passive:true});
+function resize(){
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile?1.5:2));
+  renderer.setSize(window.innerWidth, window.innerHeight, false);
+  camera.aspect = window.innerWidth/window.innerHeight;
+  camera.updateProjectionMatrix();
+}
+window.addEventListener('resize', resize); resize();
+
+var t = 0, running = true;
+document.addEventListener('visibilitychange', function(){ running = !document.hidden; });
+function step(dt){
+  t += dt;
+  ship.rotation.y += dt*.18;
+  ship.position.y = 2.5 + Math.sin(t*.6)*.09;
+  rim.forEach(function(sp, i2){ sp.material.opacity = .35 + .45*(0.5 + 0.5*Math.sin(t*2.2 + i2*.7)); });
+  port.material.opacity = .7 + .25*Math.sin(t*2.8);
+  beam.material.opacity = .07 + .03*Math.sin(t*1.7);
+  beam.scale.x = beam.scale.z = 1 + .04*Math.sin(t*2.3);
+  for (var i2 = 0; i2 < BP; i2++){
+    var ph = (bseed[i2*2+1] + t*.085) % 1;           /* 0 ground -> 1 ship */
+    var y = -1.25 + ph*3.55;
+    var r = (1.5 - ph*1.2) * (.35 + .65*bseed[i2*2+1]);
+    var an = bseed[i2*2] + t*(.5 + bseed[i2*2+1]*.4) + ph*2.2;
+    bpos[i2*3] = Math.cos(an)*r;
+    bpos[i2*3+1] = y;
+    bpos[i2*3+2] = Math.sin(an)*r;
+  }
+  bGeo.attributes.position.needsUpdate = true;
+  rings.forEach(function(rg, i2){
+    var ph = (t*.5 - i2*.3) % 2;
+    rg.material.opacity = ph < 0 ? 0 : Math.max(0, .42 - ph*.21);
+    var s = 1 + (ph>0?ph:0)*.16;
+    rg.scale.set(s, s, 1);
+  });
+  mx += (tmx-mx)*.04; my += (tmy-my)*.04;
+  camera.position.x = mx*1.6;
+  camera.position.y = 1.5 - my*.9;
+  camera.lookAt(0, 1.15, 0);
+}
+step(.016); renderer.render(scene, camera);
+if (QA || RM){
+  for (var k = 0; k < 90; k++) step(.016);
+  renderer.render(scene, camera);
+} else {
+  var last = performance.now();
+  (function loop(now){
+    requestAnimationFrame(loop);
+    if (!running) return;
+    var dt = Math.min((now-last)/1000, .05); last = now;
+    step(dt);
+    renderer.render(scene, camera);
+  })(last);
+}
+window.__ship = { seek:function(s){ for(var k=0;k<s*60;k++) step(1/60); renderer.render(scene,camera); } };
+})();
+</script>
+</body>
+</html>

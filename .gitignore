@@ -7,9 +7,6 @@ index-v1-backup.html
 *.bak
 index.html.bak-*
 
-# Separate CloudPanel sites — deployed independently
-subdomains/
-
 # OS / editor cruft
 .DS_Store
 Thumbs.db

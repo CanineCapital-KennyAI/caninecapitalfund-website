@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investor Portal — Coming Soon · Canine Capital</title>
+<meta name="description" content="The Canine Capital Investor Portal is in final assembly — verification, subscriptions, statements, and live positions. Coming soon.">
+<meta name="robots" content="noindex,follow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230530AD'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='white' text-anchor='middle' font-weight='bold'%3ECC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Sora:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--blue-200:#C0D8FA;--blue-800:#0530AD;--blue-950:#020C2E;--sky-300:#A0D7F4;--sky-400:#73C2EC;--sky-600:#2997D8;
+--f-display:'Playfair Display',Georgia,serif;--f-body:'Sora',system-ui,sans-serif;--f-mono:'IBM Plex Mono',monospace}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:var(--f-body);background:radial-gradient(120% 100% at 50% 0%,#04205c 0%,var(--blue-950) 55%,#010818 100%);color:#fff;overflow:hidden;-webkit-font-smoothing:antialiased}
+canvas{position:fixed;inset:0;width:100%;height:100%}
+.vig{position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 40%,rgba(1,6,20,.72) 100%)}
+.ui{position:fixed;inset:0;display:flex;flex-direction:column;z-index:3}
+.top{display:flex;align-items:center;justify-content:space-between;padding:26px 34px}
+.mark{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.mark .dash{width:30px;height:3px;border-radius:2px;background:linear-gradient(90deg,#2997D8,#73C2EC);flex:0 0 auto}
+.mark b{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.status{font-family:var(--f-mono);font-size:10px;letter-spacing:.16em;color:var(--sky-400);text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.status i{width:6px;height:6px;border-radius:50%;background:var(--sky-400);animation:pul 2s infinite}
+@keyframes pul{0%,100%{opacity:1}50%{opacity:.3}}
+.mid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 24px;pointer-events:none}
+.mid>*{pointer-events:auto}
+.kick{font-family:var(--f-mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--sky-400);margin-bottom:18px}
+h1{font-family:var(--f-display);font-weight:400;font-size:clamp(2.3rem,6.5vw,4.4rem);line-height:1.08;text-wrap:balance;max-width:13ch}
+h1 em{font-style:italic;color:var(--sky-400)}
+.sub{margin-top:18px;font-size:15px;font-weight:300;line-height:1.75;color:var(--blue-200);max-width:480px;text-wrap:balance}
+.row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:14px;padding:13px 26px;border-radius:12px;text-decoration:none;transition:transform .2s,box-shadow .2s;min-height:46px}
+.btn:hover{transform:translateY(-1px);box-shadow:0 8px 28px rgba(41,151,216,.35)}
+.btn-w{background:#fff;color:var(--blue-800)}
+.btn-o{border:1.5px solid rgba(255,255,255,.45);color:#fff}
+.btn-o:hover{border-color:#fff}
+.bot{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:22px 34px;flex-wrap:wrap}
+.ship{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.2em;color:rgba(115,194,236,.5);text-transform:uppercase}
+.contact{font-size:11.5px;color:rgba(192,216,250,.6)}
+.contact a{color:rgba(192,216,250,.85);text-decoration:none}
+.contact a:hover{color:#fff}
+@media(max-width:640px){.top,.bot{padding:18px 20px}.bot{justify-content:center;text-align:center}.row .btn{width:100%}.mid .row{width:100%;max-width:380px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<canvas id="c" aria-hidden="true"></canvas>
+<div class="vig" aria-hidden="true"></div>
+<div class="ui">
+  <div class="top">
+    <a class="mark" href="https://www.caninecapitalfund.com"><span class="dash"></span><b>Canine&nbsp;Capital</b></a>
+    <span class="status"><i></i>Final Assembly</span>
+  </div>
+  <div class="mid">
+    <p class="kick" data-e>Investor Portal &middot; Coming Soon</p>
+    <h1 data-e>Where Capital <em>Thinks.</em></h1>
+    <p class="sub" data-e>Your portal is in final assembly &mdash; verification, subscriptions, statements, and live positions, run by the same intelligence that runs the platform.</p>
+    <div class="row" data-e>
+      <a class="btn btn-w" href="mailto:support@caninecapitalfund.com?subject=Notify%20Me%20%E2%80%94%20Investor%20Portal%20Launch">Notify Me at Launch</a>
+      <a class="btn btn-o" href="https://www.caninecapitalfund.com">Explore Canine Capital &rarr;</a>
+    </div>
+  </div>
+  <div class="bot">
+    <span class="ship" data-e>Mothership link established &middot; investor interface docking soon</span>
+    <span class="contact" data-e>Boston, MA &middot; <a href="tel:+18774367945">(877) 436-7945</a> &middot; <a href="mailto:support@caninecapitalfund.com">support@caninecapitalfund.com</a></span>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+(function(){
+"use strict";
+var QA = /[?&]qa=1/.test(location.search);
+var RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* entrance */
+if (typeof gsap !== 'undefined' && !RM && !QA){
+  gsap.from('[data-e]', {y: 26, opacity: 0, duration: 1, stagger: .12, ease: 'power3.out', delay: .3});
+}
+
+if (typeof THREE === 'undefined') return;
+var canvas = document.getElementById('c'), renderer;
+try{ renderer = new THREE.WebGLRenderer({canvas: canvas, alpha: true, antialias: true, preserveDrawingBuffer: true}); }
+catch(e){ return; }
+var isMobile = window.innerWidth < 700;
+var scene = new THREE.Scene();
+var camera = new THREE.PerspectiveCamera(46, 1, .1, 100);
+camera.position.set(0, .25, 7.2);
+
+function glowTex(){
+  var c = document.createElement('canvas'); c.width = c.height = 64;
+  var x = c.getContext('2d'), g = x.createRadialGradient(32,32,0,32,32,32);
+  g.addColorStop(0,'rgba(255,255,255,1)'); g.addColorStop(.35,'rgba(160,215,244,.7)'); g.addColorStop(1,'rgba(0,0,0,0)');
+  x.fillStyle = g; x.fillRect(0,0,64,64);
+  return new THREE.CanvasTexture(c);
+}
+var TEX = glowTex();
+
+/* ── the brain: stylized point-cloud cortex ── */
+function gauss(){ var u=0,v=0; while(!u)u=Math.random(); while(!v)v=Math.random();
+  return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v); }
+function noise(x,y,z){
+  return Math.sin(x*3.1+1.7)*Math.sin(y*2.9+4.2)*Math.sin(z*3.3+2.1)
+   + .55*Math.sin(x*6.3+.5)*Math.sin(y*5.7+2.2)*Math.sin(z*6.1+1.3);
+}
+var N = isMobile ? 1500 : 2600, S = 1.95;
+var nodes = new Float32Array(N*3);
+for (var i = 0; i < N; i++){
+  var dx = gauss(), dy = gauss(), dz = gauss();
+  var L = Math.sqrt(dx*dx+dy*dy+dz*dz) || 1; dx/=L; dy/=L; dz/=L;
+  var w = 1 + .15*noise(dx*2, dy*2, dz*2);
+  var px = dx*1.28*w, py = dy*.98*w, pz = dz*1.52*w;
+  if (Math.abs(px) < .16 && py > 0){ px += (px<0?-1:1)*(.16-Math.abs(px))*.95; py -= .04; } /* central fissure */
+  if (py < -.55) py = -.55 - (py+.55)*.35;                                                   /* flat base */
+  nodes[i*3] = px*S; nodes[i*3+1] = py*S; nodes[i*3+2] = pz*S;
+}
+var brain = new THREE.Group();
+scene.add(brain);
+
+var nGeo = new THREE.BufferGeometry();
+nGeo.setAttribute('position', new THREE.BufferAttribute(nodes, 3));
+brain.add(new THREE.Points(nGeo, new THREE.PointsMaterial({color:0x73C2EC, size:isMobile?.07:.055, map:TEX, transparent:true, opacity:.85, blending:THREE.AdditiveBlending, depthWrite:false})));
+
+/* k-nearest edges + adjacency for pulses */
+var adj = [], epos = [], MAXD = .62;
+for (i = 0; i < N; i++) adj.push([]);
+for (i = 0; i < N; i++){
+  var b1=-1,b2=-1,d1=1e9,d2=1e9, xi=nodes[i*3], yi=nodes[i*3+1], zi=nodes[i*3+2];
+  for (var j = 0; j < N; j++){
+    if (j === i) continue;
+    var ddx=nodes[j*3]-xi, ddy=nodes[j*3+1]-yi, ddz=nodes[j*3+2]-zi;
+    var d = ddx*ddx+ddy*ddy+ddz*ddz;
+    if (d < d1){ d2=d1; b2=b1; d1=d; b1=j; } else if (d < d2){ d2=d; b2=j; }
+  }
+  [b1,b2].forEach(function(b, bi){
+    var dd = bi ? d2 : d1;
+    if (b >= 0 && dd < MAXD*MAXD && adj[i].indexOf(b) < 0){
+      adj[i].push(b); adj[b].push(i);
+      epos.push(xi, yi, zi, nodes[b*3], nodes[b*3+1], nodes[b*3+2]);
+    }
+  });
+}
+var eGeo = new THREE.BufferGeometry();
+eGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(epos), 3));
+brain.add(new THREE.LineSegments(eGeo, new THREE.LineBasicMaterial({color:0x2997D8, transparent:true, opacity:.16, blending:THREE.AdditiveBlending, depthWrite:false})));
+
+/* synapse pulses: bright sprites walking the graph */
+var PULSES = isMobile ? 9 : 16, pulses = [];
+for (i = 0; i < PULSES; i++){
+  var sp = new THREE.Sprite(new THREE.SpriteMaterial({map:TEX, transparent:true, opacity:0, blending:THREE.AdditiveBlending, depthWrite:false, color:0xBFE7FF}));
+  sp.scale.setScalar(.34);
+  brain.add(sp);
+  pulses.push({s:sp, a:0, b:0, t:2, hops:0});
+}
+function nextHop(p, from){
+  var opts = adj[from];
+  if (!opts || !opts.length){ p.hops = 0; return; }
+  p.a = from; p.b = opts[(Math.random()*opts.length)|0]; p.t = 0;
+}
+function fire(p, start){
+  p.hops = 3 + (Math.random()*4|0);
+  nextHop(p, start !== undefined ? start : (Math.random()*N|0));
+}
+/* halo behind it all */
+var halo = new THREE.Sprite(new THREE.SpriteMaterial({map:TEX, transparent:true, opacity:.16, blending:THREE.AdditiveBlending, depthWrite:false, color:0x2997D8}));
+halo.scale.setScalar(11);
+scene.add(halo);
+/* dust */
+var DN = isMobile ? 200 : 420, dpos = new Float32Array(DN*3);
+for (i = 0; i < DN; i++){ dpos[i*3]=(Math.random()-.5)*22; dpos[i*3+1]=(Math.random()-.5)*14; dpos[i*3+2]=(Math.random()-.5)*10-3; }
+var dGeo = new THREE.BufferGeometry();
+dGeo.setAttribute('position', new THREE.BufferAttribute(dpos, 3));
+var dust = new THREE.Points(dGeo, new THREE.PointsMaterial({color:0x73C2EC, size:.05, map:TEX, transparent:true, opacity:.4, blending:THREE.AdditiveBlending, depthWrite:false}));
+scene.add(dust);
+
+var mx = 0, my = 0, tmx = 0, tmy = 0;
+window.addEventListener('pointermove', function(e){
+  tmx = e.clientX/window.innerWidth - .5; tmy = e.clientY/window.innerHeight - .5;
+}, {passive:true});
+function resize(){
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile?1.5:2));
+  renderer.setSize(window.innerWidth, window.innerHeight, false);
+  camera.aspect = window.innerWidth/window.innerHeight;
+  camera.updateProjectionMatrix();
+}
+window.addEventListener('resize', resize); resize();
+
+var A = new THREE.Vector3(), B = new THREE.Vector3();
+var t = 0, storm = 4, running = true;
+document.addEventListener('visibilitychange', function(){ running = !document.hidden; });
+
+function step(dt){
+  t += dt;
+  brain.rotation.y += dt*.12;
+  brain.rotation.x = Math.sin(t*.22)*.05 + my*.25;
+  brain.rotation.z = mx*.12;
+  mx += (tmx-mx)*.04; my += (tmy-my)*.04;
+  dust.rotation.y += dt*.012;
+  /* storms: a burst of thought */
+  storm -= dt;
+  if (storm <= 0){ storm = 5 + Math.random()*4; var origin = Math.random()*N|0;
+    pulses.slice(0, 6).forEach(function(p){ fire(p, origin); }); }
+  pulses.forEach(function(p){
+    if (p.hops <= 0){ if (Math.random() < dt*.8) fire(p); p.s.material.opacity = 0; return; }
+    p.t += dt*2.6;
+    if (p.t >= 1){ p.hops--; if (p.hops > 0) nextHop(p, p.b); else { p.s.material.opacity = 0; return; } }
+    A.fromArray(nodes, p.a*3); B.fromArray(nodes, p.b*3);
+    p.s.position.lerpVectors(A, B, Math.min(p.t,1));
+    p.s.material.opacity = .95;
+    p.s.scale.setScalar(.26 + .14*Math.sin(p.t*Math.PI));
+  });
+  halo.material.opacity = .13 + .04*Math.sin(t*.8);
+}
+step(.016); renderer.render(scene, camera); /* first paint */
+if (QA || RM){
+  for (var k = 0; k < 90; k++) step(.016);
+  renderer.render(scene, camera);
+} else {
+  var last = performance.now();
+  (function loop(now){
+    requestAnimationFrame(loop);
+    if (!running) return;
+    var dt = Math.min((now-last)/1000, .05); last = now;
+    step(dt);
+    renderer.render(scene, camera);
+  })(last);
+}
+window.__brain = { seek:function(s){ for(var k=0;k<s*60;k++) step(1/60); renderer.render(scene,camera); } };
+})();
+</script>
+</body>
+</html>
